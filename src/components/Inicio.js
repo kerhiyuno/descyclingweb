@@ -7,6 +7,10 @@ import baldosas from '../img/baldosas.jpg';
 import otros from '../img/Maceteros/otros.jpeg';
 import maceteros from '../img/Maceteros/6.jpeg';
 
+import portada from '../img/carrusel/portada.png';
+import hacemos from '../img/carrusel/hacemos.png';
+import prueba from '../img/carrusel/prueba.png';
+
 
 const Inicio = () => {
     const history = useHistory();
@@ -20,17 +24,17 @@ const Inicio = () => {
     return(
         <Fragment>
             <Carousel>
-                <Carousel.Item interval={1000}>
+                <Carousel.Item interval={2000}>
                     {ratio > 1 ? 
                     <img 
                     className="d-block w-100 mt-5 imagenhorizontal"
-                    src="http://placekitten.com/1600/600"
+                    src={portada}
                     alt="Second slide"
                     />
                     :
                     <img 
                     className="d-block w-100 mt-5 imagenvertical"
-                    src="http://placekitten.com/1600/600"
+                    src={portada}
                     alt="Second slide"
                     />
                     }
@@ -39,17 +43,17 @@ const Inicio = () => {
                     <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
-                <Carousel.Item interval={1000}>
+                <Carousel.Item interval={2000}>
                     {ratio > 1 ? 
                     <img 
                     className="d-block w-100 mt-5 imagenhorizontal"
-                    src="http://placekitten.com/1600/600"
+                    src={hacemos}
                     alt="Second slide"
                     />
                     :
                     <img 
                     className="d-block w-100 mt-5 imagenvertical"
-                    src="http://placekitten.com/1600/600"
+                    src={hacemos}
                     alt="Second slide"
                     />
                     
@@ -59,17 +63,17 @@ const Inicio = () => {
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
-                <Carousel.Item interval={1000}>
+                <Carousel.Item interval={2000}>
                     {ratio > 1 ? 
                     <img 
                     className="d-block w-100 mt-5 imagenhorizontal"
-                    src="http://placekitten.com/1600/600"
+                    src={prueba}
                     alt="Second slide"
                     />
                     :
                     <img 
                     className="d-block w-100 mt-5 imagenvertical"
-                    src="http://placekitten.com/1600/600"
+                    src={prueba}
                     alt="Second slide"
                     />
                     
