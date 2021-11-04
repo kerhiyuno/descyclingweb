@@ -1,0 +1,73 @@
+.bloque{
+    background-color: #e2ccbf;
+    color: black;
+    margin: 10px auto;
+    padding: 10px;
+    min-width: 300px;
+    max-width: 900px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+    position: relative;
+    box-shadow: 0 6px 6px rgba(0,0,0,0.15);
+  }
+.bloquetotal{
+    background-color: #167067;
+    min-height: 20vh;
+    height: auto;
+    color: white;
+    width:auto;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+    position: relative;
+  }
+
+.botonSecciones{
+    background-color: #167067;
+    color: white;
+    margin-right: 5px;
+    text-decoration: none;
+    border: 0px;
+    width: 100%;
+}
+.botonSecciones:hover {
+  background-color: green;
+}
+
+h3{
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+p{
+  text-align: center;
+}
+
+h1{
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.botones{
+  display:flex;
+	justify-content: center;
+}
+
+.imagenhorizontal{
+  max-height: 600px;
+}
+.imagenvertical{
+  height: 300px;
+  width: 100vh;
+}
+
+.imagenSecciones {
+  border-radius: 10%;
+  height: 20vh;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.bloqueimagenboton {
+  padding: 20px;
+  margin: 20px;
+}

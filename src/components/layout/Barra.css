@@ -1,0 +1,77 @@
+.navbar-global{
+    color: white;
+    background: black;
+}
+.NavToogler-empaty{
+    color: white !important;
+    border-color: white !important;
+}
+
+.NavLink-empaty{
+    color: white !important;
+    max-width: 200px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.NavLink-empaty:hover{
+    color: white !important;
+    cursor: pointer;
+    background: #1e9488 !important;
+    color: white !important;
+}
+
+.Nav-dropdown-menu{
+    background: #167067 !important;
+    max-width: 200px;
+}
+
+.Nav-dropdown{
+    background: #167067 !important;
+    color: white !important;
+    max-width: 200px;
+}
+
+.Nav-dropdown:hover{
+    background: #1e9488 !important;
+    color: white !important;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.NavLink-empaty.alerta{
+    position: relative;
+    margin-right: 7px;
+}
+
+.NavLink-empaty.alerta.sol{
+    max-width: 200px;
+}
+.NavLink-empaty.alerta.al{
+    max-width: 200px;
+}
+
+.contador {
+    position: absolute;
+    top: -3px;
+    right: -5px;
+    padding: 5px 10px;
+    border-radius: 50%;
+    background: #be6d16;
+    color: white;
+}
+
+.logout{
+    min-width: 70px;
+    text-align: center;
+    cursor: pointer;
+    background: #1e9488;
+    border-radius: 10px;
+    border: none;
+    color: white !important;
+}
+.navbar-center {
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+  }

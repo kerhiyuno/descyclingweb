@@ -1,0 +1,49 @@
+.bloqueQuienesSomos{
+    background-color: #e2ccbf;
+    color: black;
+    margin: 10px auto;
+    padding: 10px;
+    min-width: 300px;
+    max-width: 700px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+    position: relative;
+    margin-top: 5vh;
+    box-shadow: 0 6px 6px rgba(0,0,0,0.15);
+  }
+
+
+.imagenesbloque{
+  background-color: red;
+}
+
+.imagenes{
+  padding: 5px;
+  border-radius: 50%;
+}
+
+.card {
+  padding-top: 25px;
+  border-radius: 50%;
+  height: 450px;
+}
+.card2 {
+  width: 30vh !important;
+  padding-top: 25px;
+  border-radius: 50%;
+  height: 450px;
+}
+
+.card-img-top-profile {
+  border-radius: 50%;
+  width: 80%;
+  align-self: center;
+}
+h1 {
+  text-align:center;
+  padding: 10px;
+}
+
+.letracard {
+  font-size: 14px;
+}

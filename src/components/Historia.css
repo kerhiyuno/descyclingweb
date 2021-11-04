@@ -1,0 +1,35 @@
+.contenedor {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 2fr 2fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr 2fr 1fr;
+    position: relative;
+    height: 94vh;
+  }
+
+
+.item-1 {
+    grid-row: 2; 
+    grid-column: 2/4;
+    background-color: #e2ccbf;
+    color: black;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 14px;
+    padding: 20px;
+    margin-top: 10vh;
+    box-shadow: 0 6px 6px rgba(0,0,0,0.15);
+}
+
+.item-2 {
+    grid-row: 4; 
+    grid-column: 3/6;
+    background-color: #e2ccbf;
+    color: black;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 14px;
+    padding: 20px;
+    box-shadow: 0 6px 6px rgba(0,0,0,0.15);
+}
+.item-3 {
+    grid-row: 3; 
+}
+  

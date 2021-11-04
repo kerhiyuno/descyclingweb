@@ -1,0 +1,10 @@
+body {
+    text-align: center;
+}
+.formulario {
+    display:flex;
+	justify-content: center;
+    padding: 50px;
+    font-family: 'Josefin Sans', sans-serif;
+
+}
