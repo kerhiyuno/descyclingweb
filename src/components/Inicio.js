@@ -9,9 +9,15 @@ import baldosas from '../img/baldosas.jpg';
 import otros from '../img/Maceteros/otros.jpeg';
 import maceteros from '../img/Maceteros/6.jpeg';
 
+<<<<<<< HEAD
 import car1 from '../img/carrusel/1.png';
 import car2 from '../img/carrusel/2.png';
 import car3 from '../img/carrusel/3.png';
+=======
+import portada from '../img/carrusel/portada.png';
+import hacemos from '../img/carrusel/hacemos.png';
+import prueba from '../img/carrusel/prueba.png';
+>>>>>>> d0d09236f62ffefa0404eece5733200e1965e2fa
 
 
 const Inicio = () => {
@@ -27,17 +33,30 @@ const Inicio = () => {
     return(
         <Fragment>
             <Carousel>
+<<<<<<< HEAD
                 <Carousel.Item interval={3000}>
                     {ratio > 1 ? 
                     <img 
                     className="d-block w-100 imagenhorizontal"
                     src={car1}
+=======
+                <Carousel.Item interval={2000}>
+                    {ratio > 1 ? 
+                    <img 
+                    className="d-block w-100 mt-5 imagenhorizontal"
+                    src={portada}
+>>>>>>> d0d09236f62ffefa0404eece5733200e1965e2fa
                     alt="Second slide"
                     />
                     :
                     <img 
+<<<<<<< HEAD
                     className="d-block w-100 imagenvertical"
                     src={car1}
+=======
+                    className="d-block w-100 mt-5 imagenvertical"
+                    src={portada}
+>>>>>>> d0d09236f62ffefa0404eece5733200e1965e2fa
                     alt="Second slide"
                     />
                     }
@@ -46,17 +65,30 @@ const Inicio = () => {
                     <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
+<<<<<<< HEAD
                 <Carousel.Item interval={3000}>
                     {ratio > 1 ? 
                     <img 
                     className="d-block w-100 imagenhorizontal"
                     src={car2}
+=======
+                <Carousel.Item interval={2000}>
+                    {ratio > 1 ? 
+                    <img 
+                    className="d-block w-100 mt-5 imagenhorizontal"
+                    src={hacemos}
+>>>>>>> d0d09236f62ffefa0404eece5733200e1965e2fa
                     alt="Second slide"
                     />
                     :
                     <img 
+<<<<<<< HEAD
                     className="d-block w-100 imagenvertical"
                     src={car2}
+=======
+                    className="d-block w-100 mt-5 imagenvertical"
+                    src={hacemos}
+>>>>>>> d0d09236f62ffefa0404eece5733200e1965e2fa
                     alt="Second slide"
                     />
                     
@@ -66,17 +98,30 @@ const Inicio = () => {
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
+<<<<<<< HEAD
                 <Carousel.Item interval={3000}>
                     {ratio > 1 ? 
                     <img 
                     className="d-block w-100  imagenhorizontal"
                     src={car3}
+=======
+                <Carousel.Item interval={2000}>
+                    {ratio > 1 ? 
+                    <img 
+                    className="d-block w-100 mt-5 imagenhorizontal"
+                    src={prueba}
+>>>>>>> d0d09236f62ffefa0404eece5733200e1965e2fa
                     alt="Second slide"
                     />
                     :
                     <img 
+<<<<<<< HEAD
                     className="d-block w-100  imagenvertical"
                     src={car3}
+=======
+                    className="d-block w-100 mt-5 imagenvertical"
+                    src={prueba}
+>>>>>>> d0d09236f62ffefa0404eece5733200e1965e2fa
                     alt="Second slide"
                     />
                     

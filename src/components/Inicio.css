@@ -19,6 +19,7 @@
     background-color: #e6e6e6;
     color: black;
     margin: 10px auto;
+    margin-top: 5vh;
     padding: 10px;
     min-width: 300px;
     max-width: 1008px;
@@ -69,7 +70,7 @@ h1{
 }
 
 .imagenhorizontal{
-  max-height: 600px;
+  max-height: 800px;
 }
 .imagenvertical{
   height: 300px;
