@@ -11,3 +11,22 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: "Playlist-Caps";
+  src: local("Playlist"),
+   url("./fonts/Playlist/Playlist-Caps.otf") format("opentype");
+  }
+
+@font-face {
+  font-family: "Playlist-Ornament";
+  src: local("Playlist"),
+  url("./fonts/Playlist/Playlist-Ornament.otf") format("opentype");
+}
+@font-face {
+  font-family: "Playlist-Script";
+  src: local("Playlist"),
+    url("./fonts/Playlist/Playlist-Script.otf") format("opentype");
+}
+      
+  

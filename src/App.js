@@ -1,5 +1,5 @@
 import './App.css';
-import  { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import  { BrowserRouter, Routes, Route} from 'react-router-dom';
 import Inicio from './components/Inicio';
 import PaginaProductos from './components/PaginaProductos';
 import QuienesSomos from './components/QuienesSomos';
@@ -7,22 +7,27 @@ import Historia from './components/Historia';
 import Blog from './components/Blog';
 import Contacto from './components/Contacto';
 import Barra from './components/layout/Barra';
+import Footer from './components/layout/Footer';
+import ProductosState from './context/productosState';
 
 
 
 function App() {
   return (
-      <Router>
+      <BrowserRouter>
+        <ProductosState>
         <Barra/>
-        <Switch>
-          <Route exact path="/" component={Inicio}/>
-          <Route exact path="/Productos" component={PaginaProductos}/>
-          <Route exact path="/QuienesSomos" component={QuienesSomos}/>
-          <Route exact path="/Historia" component={Historia}/>
-          <Route exact path="/Blog" component={Blog}/>
-          <Route exact path="/Contacto" component={Contacto}/>
-        </Switch>
-      </Router>
+        <Routes>
+          <Route exact path="/" element={<Inicio />}/>
+          <Route exact path="/Productos" element={<PaginaProductos />}/>
+          <Route exact path="/QuienesSomos" element={<QuienesSomos />}/>
+          <Route exact path="/Historia" element={<Historia />}/>
+          <Route exact path="/Blog" element={<Blog />}/>
+          <Route exact path="/Contacto" element={<Contacto />}/>
+        </Routes>
+        <Footer/>
+        </ProductosState>
+      </BrowserRouter>
   );
 }
 

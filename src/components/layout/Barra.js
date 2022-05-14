@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './Barra.css';
 import {
   Collapse,
@@ -21,9 +21,9 @@ const Barra = (props) => {
 
   return (
     <div>
-    <Navbar  className="fixed-top" style={{backgroundColor: '#167067'}} expand="lg">
-        <NavbarBrand href="/" style={{marginLeft: "4%", paddingRight: "20px"}}>
-                  <img src={logo} alt="" width="150"/>
+    <Navbar  className="fixed-top navbarsize" style={{backgroundColor: 'white'}} expand="lg">
+        <NavbarBrand href="/" style={{marginLeft: "4%", paddingRight: "20¡¡0px"}}>
+                  <img src={logo} alt="" width="200"/>
               </NavbarBrand>
         <NavbarToggler className="NavToogler-empaty" onClick={toggle} />
         <Collapse className="logCollapse" isOpen={isOpen} onExited={onExited} navbar>
@@ -50,6 +50,8 @@ const Barra = (props) => {
             </Nav>
         </Collapse>
     </Navbar>
+    <div className="barraverde">
+            </div>
 </div>
   );
 }

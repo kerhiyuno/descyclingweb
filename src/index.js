@@ -1,12 +1,17 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './fonts/Playlist/Playlist-Caps.otf';
+import './fonts/Playlist/Playlist-Ornament.otf';
+import './fonts/Playlist/Playlist-Script.otf';
 
 
-ReactDOM.render(
+const divRoot = document.getElementById('root');
+const root = createRoot(divRoot);
+root.render(
   <React.StrictMode>
     <App />
     <link
@@ -19,9 +24,9 @@ ReactDOM.render(
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;1,500&display=swap" rel="stylesheet"></link>
     <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet"></link>
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"></link>
+
+  </React.StrictMode>);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

@@ -1,40 +1,42 @@
 .navbar-global{
-    color: white;
+    color: #167067;
     background: black;
 }
 .NavToogler-empaty{
     color: white !important;
-    border-color: white !important;
+    border-color: #167067 !important;
+    background-color: #167067 !important;
+    margin-right: 30px;
 }
 
 .NavLink-empaty{
-    color: white !important;
-    max-width: 200px;
+    color: #167067 !important;
+    max-width: auto;
     text-align: center;
     border-radius: 15px;
 }
 
 .NavLink-empaty:hover{
-    color: white !important;
+    color: #167067 !important;
     cursor: pointer;
-    background: #1e9488 !important;
-    color: white !important;
+    background: white !important;
 }
 
 .Nav-dropdown-menu{
-    background: #167067 !important;
+    background:white !important;
     max-width: 200px;
+    
 }
 
 .Nav-dropdown{
-    background: #167067 !important;
-    color: white !important;
+    background: white !important;
+    color: #167067 !important;
     max-width: 200px;
 }
 
 .Nav-dropdown:hover{
-    background: #1e9488 !important;
-    color: white !important;
+    background:white !important;
+    color: #167067 !important;
     border-radius: 15px;
     cursor: pointer;
 }
@@ -58,7 +60,7 @@
     padding: 5px 10px;
     border-radius: 50%;
     background: #be6d16;
-    color: white;
+    color: #167067;
 }
 
 .logout{
@@ -68,10 +70,27 @@
     background: #1e9488;
     border-radius: 10px;
     border: none;
-    color: white !important;
+    color: #167067 !important;
 }
 .navbar-center {
     position: absolute;
     left: 50%;
     transform: translatex(-50%);
   }
+
+.barraverde{
+    background-color: white;
+    height: 20px;
+    width: auto;
+  }
+
+  .barraverde{
+    background-color: #167067;
+    min-height: 11vh;
+    height: auto;
+    width:auto;
+  }
+
+.navbarsize{
+    width: auto;
+}

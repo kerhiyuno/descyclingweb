@@ -1,4 +1,3 @@
-import React from 'react';
 import './QuienesSomos.css';
 import cati from '../img/cati.jpeg';
 import coni from '../img/coni.jpeg';
@@ -7,8 +6,8 @@ import seba from '../img/seba.jpeg';
 
 const QuienesSomos = () => {
     return(
-      <div className="container-fluid">
-            <h1>Quienes Somos</h1>
+      <div className="container-fluid mb-5">
+            <h1 className="mt-3">Quienes Somos</h1>
             <div className="row align-items-center justify-content-center mt-4">
               <div className="col-md-3 mb-4 mr-5 d-flex justify-content-center">
                 <div className="card border-0 shadow card2">
