@@ -1,0 +1,138 @@
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.bloqueproductos{
+    background-color: white;
+    color: black;
+    margin: 10px auto;
+    padding: 10px;
+    min-width: 300px;
+    max-width: 1500px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 15px;
+    position: relative;
+    box-shadow: 0 6px 6px rgba(0,0,0,0.15);
+  }
+.bloqueestadisticas{
+    background-color: #e6e6e6;
+    color: black;
+    margin: 10px auto;
+    margin-top: 5vh;
+    padding: 10px;
+    min-width: 300px;
+    max-width: 1008px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 15px;
+    position: relative;
+    box-shadow: 0 6px 6px rgba(0,0,0,0.15);
+  }
+.bloquetotal{
+    background-color: #167067;
+    min-height: 20vh;
+    height: auto;
+    color: white;
+    width:auto;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 15px;
+    position: relative;
+    box-shadow: 0 6px 6px rgba(0,0,0,0.15);
+  }
+
+.botonSecciones{
+    background-color: #167067;
+    color: white;
+    text-decoration: none;
+    border: 0px;
+    border-radius: 30px;
+}
+.botonSecciones:hover {
+  background-color: green;
+}
+
+h3{
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+p{
+  text-align: center;
+}
+
+h1{
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.botones{
+  display:flex;
+	justify-content: center;
+}
+
+.imagenhorizontal{
+  max-height: 800px;
+}
+.imagenvertical{
+  height: 300px;
+  width: 100vh;
+}
+
+.imagenSecciones {
+  border-radius: 8%;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.bloqueimagenboton {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  margin: 20px;
+  justify-self: center;
+}
+
+.reproductor{
+  display: flex;
+  justify-content: center;
+}
+
+.numeros{
+  font-size: 30px;
+}
+
+.parrafodescriptivo{
+  min-width: 280px;
+  max-width: 350px;
+  text-align: justify;
+  margin: 0 auto;
+  font-size: 20px;
+}
+
+.imagenparrafo{
+  border-radius: 10%;
+  min-width: 280px;
+  max-width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.bloquedescripcion{
+  background-color: white;
+  color: black;
+  margin: 10px auto;
+  min-width: 300px;
+  max-width: 1800px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 16px;
+  position: relative;
+}
+
+
+.bloqueimagendescripcion {
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 0 6px 6px rgba(0,0,0,0.15);
+}
