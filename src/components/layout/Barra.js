@@ -26,7 +26,7 @@ const Barra = (props) => {
                   <img src={logo} alt="" width="200"/>
               </NavbarBrand>
         <NavbarToggler className="NavToogler-empaty" onClick={toggle} />
-        <Collapse className="logCollapse" isOpen={isOpen} onExited={onExited} navbar>
+        <Collapse className="logCollapse mr-auto" isOpen={isOpen} onExited={onExited} navbar>
             <Nav navbar  className="justify-content-center" style={{ marginLeft: "0%" }}>
                 <NavItem>
                     <NavLink className="NavLink-empaty" href="/">Inicio</NavLink>
@@ -35,8 +35,7 @@ const Barra = (props) => {
                     <NavLink className="NavLink-empaty" href="/Productos">Productos</NavLink>
                 </NavItem>
                 <NavItem>
-                    <NavLink className="NavLink-empaty" href="/QuienesSomos">Quienes somos
-                    </NavLink>
+                    <NavLink className="NavLink-empaty" href="/QuienesSomos">Quienes somos</NavLink>
                 </NavItem>
                 <NavItem>
                     <NavLink className="NavLink-empaty" href="/Historia">Historia</NavLink>
@@ -47,8 +46,16 @@ const Barra = (props) => {
                 <NavItem>
                     <NavLink className="NavLink-empaty" href="/Contacto">Contacto</NavLink>
                 </NavItem>
+                <NavItem>
+                    <NavLink className="NavLink-empaty" href="/IniciarSesion">Mi cuenta</NavLink>
+                </NavItem>
             </Nav>
         </Collapse>
+        <Nav navbar >
+                <NavItem>
+                    <NavLink className="NavLink-empaty" href="/">Inicio</NavLink>
+                </NavItem>
+            </Nav>
     </Navbar>
     <div className="barraverde">
             </div>

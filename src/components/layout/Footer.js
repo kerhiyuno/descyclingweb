@@ -19,7 +19,7 @@ const Footer = (props) => {
                 Descycling
                 </h6>
                 <p className="text-right">
-                Salvando al mundo zi
+                Salvando al mundo
                 </p>
             </div>
             <hr className="w-100 d-md-none" />
