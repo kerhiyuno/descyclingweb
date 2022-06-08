@@ -14,6 +14,7 @@ const GoogleLoginBoton = () => {
             console.log(respuesta);
             console.log(respuesta.data.usuario.correo);
             localStorage.setItem('correo', respuesta.data.usuario.correo);
+            localStorage.setItem('token', respuesta.data.token);
             window.location.reload();
         } catch (error) {
             console.log(error);
@@ -29,7 +30,7 @@ const GoogleLoginBoton = () => {
     }
 
     return(
-        <div className="justify-content-centers">
+        <div className="justify-content-center">
             <script src="https://accounts.google.com/gsi/client" async defer></script>
             <div id="g_id_onload"
                 data-client_id="422132072025-ren9u59hegr1c58jdtln8qus8fr0nv5f.apps.googleusercontent.com"
