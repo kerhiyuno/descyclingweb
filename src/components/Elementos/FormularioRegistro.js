@@ -1,10 +1,11 @@
 import {useState} from 'react';
 import './Formulario.css';
 import { SpinnerCircular } from 'spinners-react';
+import axios from 'axios';
 
 const FormularioRegistro = () => {
 
-    const [mensaje, guardarMensaje] = useState({
+    const [formulario, guardarFormulario] = useState({
         nombre:'',
         apellido:'',
         correo:'',
@@ -26,19 +27,42 @@ const FormularioRegistro = () => {
 
 
 
-    const modificarMensaje = (e) => {
-        guardarMensaje({
-            ...mensaje,
+    const modificarFormulario = (e) => {
+        guardarFormulario({
+            ...formulario,
             [e.target.name] : e.target.value,
         })
-        console.log(mensaje)
+        console.log(formulario)
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         guardarExito(false);
         guardarError(false);
         guardarCargando(true);
         e.preventDefault();
+        try {
+            const respuesta = await axios.post('http://localhost:4000/api/usuarios/',{
+                nombre: formulario.nombre,
+                apellido: formulario.apellido,
+                correo: formulario.correo,
+                password: formulario.password,
+                rol: "admin"
+            });
+            console.log(respuesta);
+            guardarExito(true);
+            guardarFormulario({
+                nombre:'',
+                apellido:'',
+                correo:'',
+                password:'',
+                confirmar:''
+            });
+        } catch (error) {
+            console.log(error);
+            console.log(error.response);
+            guardarError(true);
+        }
+        guardarCargando(false);
     /*    emailjs.send('default_service','template_tab7tfm', mensaje, 'user_KIA3KKcjVJqtsoccAvicG')
 		.then((response) => {
 				   console.log('SUCCESS!', response.status, response.text);
@@ -64,7 +88,7 @@ const FormularioRegistro = () => {
                             className="form-control"
                             type="text"
                             placeholder="Ingresa tu nombre"
-                            onChange={modificarMensaje}
+                            onChange={modificarFormulario}
                         />
                     </div>
                     <div className="row-md-4 mt-2">
@@ -73,7 +97,7 @@ const FormularioRegistro = () => {
                             className="form-control"
                             type="text"
                             placeholder="Ingresa tu apellido"
-                            onChange={modificarMensaje}
+                            onChange={modificarFormulario}
                         />
                     </div>
                     <div className="row-md-4 mt-2">
@@ -82,7 +106,7 @@ const FormularioRegistro = () => {
                             className="form-control"
                             type="text"
                             placeholder="Ingresa tu correo"
-                            onChange={modificarMensaje}
+                            onChange={modificarFormulario}
                         />
                     </div>
                     <div className="row-md-4 mt-2">
@@ -91,7 +115,7 @@ const FormularioRegistro = () => {
                             className="form-control"
                             type="password"
                             placeholder="Ingresa tu contraseña"
-                            onChange={modificarMensaje}
+                            onChange={modificarFormulario}
                         />
                     </div>
                     <div className="row-md-4 mt-2">
@@ -100,7 +124,7 @@ const FormularioRegistro = () => {
                             className="form-control"
                             type="password"
                             placeholder="Confirmar contraseña"
-                            onChange={modificarMensaje}
+                            onChange={modificarFormulario}
                         />
                     </div>
                 </div>
@@ -117,7 +141,8 @@ const FormularioRegistro = () => {
             </form>
             </div>
             <div className="resultadocontacto">
-                {error ? <p className="alert alert-danger" role="alert"> Ha ocurrido un error</p> : null}
+                {error ? <p className="alert alert-danger" role="alert">Ha ocurrido un error</p> : null}
+                {exito ? <p className="alert alert-success" role="alert">El usuario ha sido registrado correctamente</p> : null}
                 <SpinnerCircular enabled={cargando} />
             </div>
         </div>

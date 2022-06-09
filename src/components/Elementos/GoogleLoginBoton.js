@@ -15,6 +15,7 @@ const GoogleLoginBoton = () => {
             console.log(respuesta.data.usuario.correo);
             localStorage.setItem('correo', respuesta.data.usuario.correo);
             localStorage.setItem('token', respuesta.data.token);
+            localStorage.setItem('nombre', respuesta.data.usuario.nombre);
             window.location.reload();
         } catch (error) {
             console.log(error);

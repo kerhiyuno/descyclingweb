@@ -51,11 +51,6 @@ const Barra = (props) => {
                 </NavItem>
             </Nav>
         </Collapse>
-        <Nav navbar >
-                <NavItem>
-                    <NavLink className="NavLink-empaty" href="/">Inicio</NavLink>
-                </NavItem>
-            </Nav>
     </Navbar>
     <div className="barraverde">
             </div>

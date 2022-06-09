@@ -2,10 +2,11 @@ import {useState, useEffect} from 'react';
 import './Formulario.css';
 import { SpinnerCircular } from 'spinners-react';
 import GoogleLoginBoton from './GoogleLoginBoton';
+import axios from 'axios';
 
 const FormularioInicioSesion = () => {
 
-    const [mensaje, guardarMensaje] = useState({
+    const [formulario, guardarFormulario] = useState({
         correo:'',
         password:'',
     })
@@ -33,19 +34,42 @@ const FormularioInicioSesion = () => {
 
 
 
-    const modificarMensaje = (e) => {
-        guardarMensaje({
-            ...mensaje,
+    const modificarFormulario = (e) => {
+        guardarFormulario({
+            ...formulario,
             [e.target.name] : e.target.value,
         })
-        console.log(mensaje)
+        console.log(formulario)
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         guardarExito(false);
         guardarError(false);
         guardarCargando(true);
         e.preventDefault();
+        try {
+            const respuesta = await axios.post('http://localhost:4000/api/auth/login',{
+                correo: formulario.correo,
+                password: formulario.password,
+            });
+            console.log(respuesta);
+            guardarExito(true);
+            guardarFormulario({
+                nombre:'',
+                apellido:'',
+                correo:'',
+                password:'',
+                confirmar:''
+            });
+            localStorage.setItem('token', respuesta.data.token);
+            localStorage.setItem('correo', respuesta.data.usuario.correo);
+            localStorage.setItem('nombre', respuesta.data.usuario.nombre);
+        } catch (error) {
+            console.log(error);
+            console.log(error.response);
+            guardarError(true);
+        }
+        guardarCargando(false);
     /*    emailjs.send('default_service','template_tab7tfm', mensaje, 'user_KIA3KKcjVJqtsoccAvicG')
 		.then((response) => {
 				   console.log('SUCCESS!', response.status, response.text);
@@ -71,7 +95,7 @@ const FormularioInicioSesion = () => {
                             className="form-control"
                             type="text"
                             placeholder="Ingresa tu correo"
-                            onChange={modificarMensaje}
+                            onChange={modificarFormulario}
                         />
                     </div>
                     <div className="row-md-4 mt-2">
@@ -80,7 +104,7 @@ const FormularioInicioSesion = () => {
                             className="form-control"
                             type="password"
                             placeholder="Ingresa tu contraseña"
-                            onChange={modificarMensaje}
+                            onChange={modificarFormulario}
                         />
                     </div>
                 </div>
@@ -98,6 +122,7 @@ const FormularioInicioSesion = () => {
             </div>
             <div className="resultadocontacto">
                 {error ? <p className="alert alert-danger" role="alert"> Ha ocurrido un error</p> : null}
+                {exito ? <p className="alert alert-success" role="alert">El usuario ha sido registrado correctamente</p> : null}
                 <SpinnerCircular enabled={cargando} />
             </div>
             <div className='col-md-2'>
