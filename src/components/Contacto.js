@@ -3,10 +3,10 @@ import './Contacto.css';
 
 const Contacto = () => {
     return(
-        <div>
+        <div className='p-5 mt-3'>
             <h1>Contacto</h1>
-            <div className="container">
-                <div className="row">
+            <div className="container mb-5">
+                <div className="row" align="center">
                     <Formulario />
                 </div>
             </div>

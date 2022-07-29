@@ -2,22 +2,16 @@ import {Fragment, useState, useContext} from 'react';
 import './Inicio.css';
 import { useNavigate } from 'react-router-dom';
 import { Carousel } from 'react-bootstrap';
-import ProductosContext from '../context/productosContext';
+import ProductosContext from '../context/productos/productosContext';
 import ReactPlayer from 'react-player';
 
 import baldosas from '../img/baldosas.jpg';
 import otros from '../img/Maceteros/otros.jpeg';
 import maceteros from '../img/Maceteros/6.jpeg';
 
-<<<<<<< HEAD
-import car1 from '../img/carrusel/1.png';
-import car2 from '../img/carrusel/2.png';
-import car3 from '../img/carrusel/3.png';
-=======
 import portada from '../img/carrusel/portada.png';
 import hacemos from '../img/carrusel/hacemos.png';
 import prueba from '../img/carrusel/prueba.png';
->>>>>>> d0d09236f62ffefa0404eece5733200e1965e2fa
 
 
 const Inicio = () => {
@@ -33,30 +27,17 @@ const Inicio = () => {
     return(
         <Fragment>
             <Carousel>
-<<<<<<< HEAD
-                <Carousel.Item interval={3000}>
-                    {ratio > 1 ? 
-                    <img 
-                    className="d-block w-100 imagenhorizontal"
-                    src={car1}
-=======
                 <Carousel.Item interval={2000}>
                     {ratio > 1 ? 
                     <img 
-                    className="d-block w-100 mt-5 imagenhorizontal"
+                    className="d-block w-100 mt-5 p-0 imagenhorizontal"
                     src={portada}
->>>>>>> d0d09236f62ffefa0404eece5733200e1965e2fa
                     alt="Second slide"
                     />
                     :
                     <img 
-<<<<<<< HEAD
-                    className="d-block w-100 imagenvertical"
-                    src={car1}
-=======
                     className="d-block w-100 mt-5 imagenvertical"
                     src={portada}
->>>>>>> d0d09236f62ffefa0404eece5733200e1965e2fa
                     alt="Second slide"
                     />
                     }
@@ -65,30 +46,17 @@ const Inicio = () => {
                     <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
-<<<<<<< HEAD
-                <Carousel.Item interval={3000}>
-                    {ratio > 1 ? 
-                    <img 
-                    className="d-block w-100 imagenhorizontal"
-                    src={car2}
-=======
                 <Carousel.Item interval={2000}>
                     {ratio > 1 ? 
                     <img 
                     className="d-block w-100 mt-5 imagenhorizontal"
                     src={hacemos}
->>>>>>> d0d09236f62ffefa0404eece5733200e1965e2fa
                     alt="Second slide"
                     />
                     :
                     <img 
-<<<<<<< HEAD
-                    className="d-block w-100 imagenvertical"
-                    src={car2}
-=======
                     className="d-block w-100 mt-5 imagenvertical"
                     src={hacemos}
->>>>>>> d0d09236f62ffefa0404eece5733200e1965e2fa
                     alt="Second slide"
                     />
                     
@@ -98,30 +66,17 @@ const Inicio = () => {
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
-<<<<<<< HEAD
-                <Carousel.Item interval={3000}>
-                    {ratio > 1 ? 
-                    <img 
-                    className="d-block w-100  imagenhorizontal"
-                    src={car3}
-=======
                 <Carousel.Item interval={2000}>
                     {ratio > 1 ? 
                     <img 
                     className="d-block w-100 mt-5 imagenhorizontal"
                     src={prueba}
->>>>>>> d0d09236f62ffefa0404eece5733200e1965e2fa
                     alt="Second slide"
                     />
                     :
                     <img 
-<<<<<<< HEAD
-                    className="d-block w-100  imagenvertical"
-                    src={car3}
-=======
                     className="d-block w-100 mt-5 imagenvertical"
                     src={prueba}
->>>>>>> d0d09236f62ffefa0404eece5733200e1965e2fa
                     alt="Second slide"
                     />
                     
@@ -135,12 +90,12 @@ const Inicio = () => {
             <div className="bloqueproductos mt-5 mb-5">
                 <h1>INNOVACIÓN CIRCULAR </h1>
                 <p>¿Quieres aportar con un granito de arena a reducir la contaminación? Conoce nuestros productos sustentables</p>
-                <div class="container-fluid">
+                <div className="container-fluid">
                         <div className="row botones">
                             <div className="col bloqueimagenboton">
                                 <div className='col'>
                                     <div className='row'>
-                                        <img src={baldosas} className="imagenSecciones" alt=""/>
+                                        <img src={baldosas} className="imagenSecciones" alt="" onClick={() =>{cambioCategoria("baldosa");navigate('/Productos')}}/>
                                     </div>
                                     <div className='row mt-1'>
                                         <button type="button" className= "botonSecciones"  onClick={() =>{cambioCategoria("baldosa");navigate('/Productos')}}>Baldosas</button>
@@ -150,7 +105,7 @@ const Inicio = () => {
                             <div className="col bloqueimagenboton">
                                 <div className='col'>
                                         <div className='row'>
-                                            <img src={maceteros} className="imagenSecciones" alt=""/>
+                                            <img src={maceteros} className="imagenSecciones" alt="" onClick={() =>{cambioCategoria("baldosa");navigate('/Productos')}}/>
                                         </div>
                                         <div className='row mt-1'>
                                             <button type="button" className= "botonSecciones"  onClick={() =>{cambioCategoria("macetero");navigate('/Productos')}}>Maceteros</button>
@@ -160,7 +115,7 @@ const Inicio = () => {
                             <div className="col bloqueimagenboton">
                                 <div className='col'>
                                         <div className='row'>
-                                            <img src={otros} className="imagenSecciones" alt=""/>
+                                            <img src={otros} className="imagenSecciones" alt="" onClick={() =>{cambioCategoria("baldosa");navigate('/Productos')}}/>
                                         </div>
                                         <div className='row mt-1'>
                                             <button type="button" className= "botonSecciones"  onClick={() =>{cambioCategoria("otro");navigate('/Productos')}}>Otros</button>
@@ -187,21 +142,21 @@ const Inicio = () => {
                         <div className="col bloqueimagendescripcion">
                             <h2 className="text-center">¡Reciclamos 300g de residuos en productos!</h2>
                             <img src={maceteros} className="imagenparrafo" alt=""/>           
-                            <p className="parrafodescriptivo">Siguiendo el modelo de economía circular, transformamos lo que para tí es basura en insumos claves dentro de nuestra composición de
+                            <p className="parrafodescriptivo mt-2">Siguiendo el modelo de economía circular, transformamos lo que para tí es basura en insumos claves dentro de nuestra composición de
                                             50% vidrio triturado, cemento y agregados de caucho y plástico
                             </p>
                         </div>
                         <div className="col bloqueimagendescripcion">
                             <h2 className="text-center">¿Por qué elegir descycling?</h2>
                             <img src={maceteros} className="imagenparrafo" alt=""/>
-                            <p className="parrafodescriptivo">Descycling es la nueva forma de gestionar y revalorizar tus residuos de forma fácil, personalizada y transparente
+                            <p className="parrafodescriptivo mt-2">Descycling es la nueva forma de gestionar y revalorizar tus residuos de forma fácil, personalizada y transparente
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
             <div className="bloqueestadisticas">
-                <div className="row">
+                <div className="row w-100">
                     <div className="col text-center">
                     <p className="numeros mb-0">1550</p>
                     <p>botellas</p>
@@ -225,7 +180,7 @@ const Inicio = () => {
                 <p>Sé parte de la comunidad "Descycling" y obtén una gestión a domicilio de tus residuos de vidrio,
                     plástico y caucho, teniendo descuentos en los productos y una atención personalizada de ellos. </p>
 
-                    <div class="container-fluid">
+                    <div className="container-fluid">
                         <div className="row botones">
                             <div className="col bloqueimagenboton">
                                 <div className='col'>
