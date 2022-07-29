@@ -1,21 +1,31 @@
-import { useEffect } from "react";
-import axios from 'axios';
+import { useEffect, useContext } from "react";
 import './GoogleLoginBoton.css';
+import clienteAxios from '../../config/axios';
+import AuthContext from '../../context/auth/authContext';
 
 const GoogleLoginBoton = () => {
+
     useEffect(() => {
         window.customCallback = handleCredentialResponse;
     }, [])
+
+    const { guardarDatosLogin, autenticado } = useContext(AuthContext);
     
     async function  handleCredentialResponse(response) {
         console.log('id token', response);
         try {
-            const respuesta = await axios.post('http://localhost:4000/api/auth/google',{id_token:response.credential});
+            const respuesta = await clienteAxios.post('/api/auth/google',{id_token:response.credential});
             console.log(respuesta);
             console.log(respuesta.data.usuario.correo);
-            localStorage.setItem('correo', respuesta.data.usuario.correo);
-            localStorage.setItem('token', respuesta.data.token);
-            localStorage.setItem('nombre', respuesta.data.usuario.nombre);
+            let token = respuesta.data.token;
+            let correo = respuesta.data.usuario.correo;
+            let nombre = respuesta.data.usuario.nombre;
+            let google = true;
+            localStorage.setItem('token', token);
+            localStorage.setItem('correo', correo);
+            localStorage.setItem('nombre', nombre);
+            localStorage.setItem('google', google);
+            guardarDatosLogin(correo,nombre,google);
             window.location.reload();
         } catch (error) {
             console.log(error);
@@ -38,7 +48,7 @@ const GoogleLoginBoton = () => {
                 data-callback="customCallback"
                 data-auto_prompt="false">
             </div>
-            <div class="g_id_signin"
+            <div className="g_id_signin"
                 data-type="standard"
                 data-size="large"
                 data-theme="outline"
@@ -47,9 +57,9 @@ const GoogleLoginBoton = () => {
                 data-logo_alignment="left">
             </div>
             <script ></script>
-            <button className="logoutGoogle mt-2" id="google_signout" onClick={() => {logoutGoogle(window.google)} }>
-                Cerrar Sesión
-            </button>
+            { autenticado ? <button className="logoutGoogle mt-2" id="google_signout" onClick={() => {logoutGoogle(window.google)} }>
+                Cerrar Sesión google
+            </button> : null}
         </div>
       )
     }

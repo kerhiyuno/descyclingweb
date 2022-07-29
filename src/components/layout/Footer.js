@@ -1,7 +1,7 @@
 import {useContext} from 'react';
 import './Footer.css';
 import { useNavigate } from 'react-router-dom';
-import ProductosContext from '../../context/productosContext';
+import ProductosContext from '../../context/productos/productosContext';
 
 
 const Footer = (props) => {

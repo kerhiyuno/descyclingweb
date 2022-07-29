@@ -11,7 +11,7 @@
     min-width: 300px;
     max-width: 1500px;
     font-family: 'Josefin Sans', sans-serif;
-    font-size: 15px;
+    font-size: 16px;
     position: relative;
     box-shadow: 0 6px 6px rgba(0,0,0,0.15);
   }
@@ -20,11 +20,11 @@
     color: black;
     margin: 10px auto;
     margin-top: 5vh;
-    padding: 10px;
+    padding: 20px;
     min-width: 300px;
-    max-width: 1008px;
+    max-width: auto;
     font-family: 'Josefin Sans', sans-serif;
-    font-size: 15px;
+    font-size: 16px;
     position: relative;
     box-shadow: 0 6px 6px rgba(0,0,0,0.15);
   }
@@ -35,7 +35,7 @@
     color: white;
     width:auto;
     font-family: 'Josefin Sans', sans-serif;
-    font-size: 15px;
+    font-size: 16px;
     position: relative;
     box-shadow: 0 6px 6px rgba(0,0,0,0.15);
   }
@@ -70,11 +70,11 @@ h1{
 }
 
 .imagenhorizontal{
-  max-height: 800px;
+  max-height: 700px;
 }
 .imagenvertical{
   height: 300px;
-  width: 100vh;
+  width: 100%;
 }
 
 .imagenSecciones {
@@ -83,6 +83,10 @@ h1{
   margin-left: auto;
   margin-right: auto;
   display: block;
+}
+
+.imagenSecciones:hover {
+  cursor: pointer
 }
 
 .bloqueimagenboton {
@@ -107,7 +111,7 @@ h1{
   max-width: 350px;
   text-align: justify;
   margin: 0 auto;
-  font-size: 20px;
+  font-size: 17px;
 }
 
 .imagenparrafo{

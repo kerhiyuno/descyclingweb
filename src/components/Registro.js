@@ -2,14 +2,12 @@ import FormularioRegistro from './Elementos/FormularioRegistro';
 
 const Registro = () => {
     return(
-        <div>
-            <div className="container" style={{marginBottom: "13%"}}>
-                <div className="row mt-5">
-                    <FormularioRegistro />
-                </div>
+        <div className="container" style={{marginBottom: "13%"}}>
+            <div className="mt-5" align="center">
+                <FormularioRegistro />
             </div>
-
         </div>
+
       )
     }
 

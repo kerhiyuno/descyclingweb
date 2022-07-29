@@ -4,7 +4,6 @@ import emailjs from 'emailjs-com';
 import { SpinnerCircular } from 'spinners-react';
 import ReCAPTCHA from "react-google-recaptcha";
 
-
 const Formulario = () => {
 
     const [mensaje, guardarMensaje] = useState({
@@ -26,7 +25,6 @@ const Formulario = () => {
      //       {headers: {'secret': "6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe", 'response': value}});
      //   console.log(respuesta);
       }
-
 
 
     const modificarMensaje = (e) => {
@@ -54,14 +52,14 @@ const Formulario = () => {
 		});
     }
     return(
-        <div className="col"> 
+        <div> 
             <div className="formulario">
-            <form className="col-md-6" onSubmit={handleSubmit}>
+            <form className="col-lg-4 col-md-6" onSubmit={handleSubmit}>
                 <fieldset className="text-center">
                     <legend>¿Quieres cotizar un nuevo proyecto?</legend>
                 </fieldset>
                 <div className="col">
-                    <div className="row-md-6">
+                    <div className="row-lg-4 row-md-6">
                         <input
                             name="from_name"
                             className="form-control"
@@ -70,7 +68,7 @@ const Formulario = () => {
                             onChange={modificarMensaje}
                         />
                     </div>
-                    <div className="row-md-6 mt-2">
+                    <div className="row-lg-4 row-md-6 mt-2">
                         <input
                             name="correo"
                             className="form-control"
@@ -79,7 +77,7 @@ const Formulario = () => {
                             onChange={modificarMensaje}
                         />
                     </div>
-                    <div className="row-md-6 mt-2">
+                    <div className="row-lg-4 row-md-6 mt-2">
                         <textarea name="message"
                             className="form-control"
                             cols="40"
@@ -88,7 +86,7 @@ const Formulario = () => {
                             onChange={modificarMensaje}/>
                     </div>
                     </div>
-                    <div className="row-md-6 mt-2 justify-content-center">
+                    <div className="row-lg-4 row-md-6 mt-2 justify-content-center">
                         <ReCAPTCHA
                             sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
                             onChange={onChange}

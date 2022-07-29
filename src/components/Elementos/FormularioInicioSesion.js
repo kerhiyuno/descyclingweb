@@ -1,15 +1,20 @@
-import {useState, useEffect} from 'react';
+import {useState, useEffect, useContext} from 'react';
 import './Formulario.css';
 import { SpinnerCircular } from 'spinners-react';
 import GoogleLoginBoton from './GoogleLoginBoton';
-import axios from 'axios';
+import AuthContext from '../../context/auth/authContext';
+import clienteAxios from '../../config/axios';
 
 const FormularioInicioSesion = () => {
+
+    const { guardarDatosLogin } = useContext(AuthContext);
+
 
     const [formulario, guardarFormulario] = useState({
         correo:'',
         password:'',
     })
+
 
     const [exito, guardarExito] = useState(false);
     const [error, guardarError] = useState(false);
@@ -48,7 +53,7 @@ const FormularioInicioSesion = () => {
         guardarCargando(true);
         e.preventDefault();
         try {
-            const respuesta = await axios.post('http://localhost:4000/api/auth/login',{
+            const respuesta = await clienteAxios.post('/api/auth/login',{
                 correo: formulario.correo,
                 password: formulario.password,
             });
@@ -61,9 +66,15 @@ const FormularioInicioSesion = () => {
                 password:'',
                 confirmar:''
             });
-            localStorage.setItem('token', respuesta.data.token);
-            localStorage.setItem('correo', respuesta.data.usuario.correo);
-            localStorage.setItem('nombre', respuesta.data.usuario.nombre);
+            let token = respuesta.data.token;
+            let correo = respuesta.data.usuario.correo;
+            let nombre = respuesta.data.usuario.nombre;
+            let google = respuesta.data.usuario.google;
+            localStorage.setItem('token', token);
+            localStorage.setItem('correo', correo);
+            localStorage.setItem('nombre', nombre);
+            localStorage.setItem('google', google);
+            guardarDatosLogin(correo,nombre,google);
         } catch (error) {
             console.log(error);
             console.log(error.response);
@@ -82,43 +93,43 @@ const FormularioInicioSesion = () => {
 		});*/
     }
     return(
-        <div className="col"> 
+        <div > 
             <div className="formulario">
-            <form className="col-md-4" onSubmit={handleSubmit}>
-                <fieldset className="text-center">
-                    <legend>Iniciar Sesión</legend>
-                </fieldset>
-                <div className="col">
-                    <div className="row-md-4">
-                        <input
-                            name="correo"
-                            className="form-control"
-                            type="text"
-                            placeholder="Ingresa tu correo"
-                            onChange={modificarFormulario}
-                        />
-                    </div>
-                    <div className="row-md-4 mt-2">
-                        <input
-                            name="password"
-                            className="form-control"
-                            type="password"
-                            placeholder="Ingresa tu contraseña"
-                            onChange={modificarFormulario}
-                        />
-                    </div>
-                </div>
-                <div className="row px-2">
-                        <input
-                                type="submit"
-                                className="btn btn-block btn-primary mt-2"
-                                value="Enviar"
+                <form className="col-lg-4 col-md-6" onSubmit={handleSubmit}>
+                    <fieldset className="text-center">
+                        <legend>Iniciar Sesión</legend>
+                    </fieldset>
+                    <div className="col">
+                        <div className="row-md-4 row-lg-6">
+                            <input
+                                name="correo"
+                                className="form-control"
+                                type="text"
+                                placeholder="Ingresa tu correo"
+                                onChange={modificarFormulario}
                             />
-                </div>
-                <div className="row mt-2" >
-                    <a href="/Registro" >Registrarse</a>
-                </div>
-            </form>
+                        </div>
+                        <div className="row-md-4 row-lg-6 mt-2">
+                            <input
+                                name="password"
+                                className="form-control"
+                                type="password"
+                                placeholder="Ingresa tu contraseña"
+                                onChange={modificarFormulario}
+                            />
+                        </div>
+                    </div>
+                    <div className="row px-2">
+                            <input
+                                    type="submit"
+                                    className="btn btn-block btn-primary mt-2"
+                                    value="Enviar"
+                                />
+                    </div>
+                    <div className="row mt-2" >
+                        <a href="/Registro" >Registrarse</a>
+                    </div>
+                </form>
             </div>
             <div className="resultadocontacto">
                 {error ? <p className="alert alert-danger" role="alert"> Ha ocurrido un error</p> : null}

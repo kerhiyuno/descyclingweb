@@ -76,21 +76,22 @@
     position: absolute;
     left: 50%;
     transform: translatex(-50%);
-  }
+}
 
 .barraverde{
-    background-color: white;
-    height: 20px;
-    width: auto;
-  }
-
-  .barraverde{
     background-color: #167067;
     min-height: 11vh;
     height: auto;
     width:auto;
-  }
+}
 
 .navbarsize{
     width: auto;
+}
+
+.barraverdecollapse{
+    background-color: #167067;
+    min-height: 1px;
+    height: auto;
+    width:auto;
 }

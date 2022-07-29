@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import './Barra.css';
 import {
   Collapse,
@@ -11,13 +11,17 @@ import {
 } from 'reactstrap';
 
 import logo from '../../img/logo.jpg';
+import AuthContext from '../../context/auth/authContext';
 
 const Barra = (props) => {
 
     const [isOpen, setIsOpen] = useState(false);
-    
+
     const toggle = () => setIsOpen(!isOpen);
     const onExited = () => setIsOpen(false);
+    const { autenticado } = useContext(AuthContext);
+
+    
 
   return (
     <div>
@@ -47,13 +51,16 @@ const Barra = (props) => {
                     <NavLink className="NavLink-empaty" href="/Contacto">Contacto</NavLink>
                 </NavItem>
                 <NavItem>
-                    <NavLink className="NavLink-empaty" href="/IniciarSesion">Mi cuenta</NavLink>
+                    <NavLink className="NavLink-empaty" href="/MiCuenta">{ autenticado ? ('Mi cuenta') : ('Iniciar Sesión')}</NavLink>
                 </NavItem>
             </Nav>
+        {isOpen ? (
+            <div className="barraverdecollapse">
+            </div>): null}
         </Collapse>
     </Navbar>
     <div className="barraverde">
-            </div>
+        </div>
 </div>
   );
 }

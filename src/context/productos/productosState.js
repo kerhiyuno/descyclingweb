@@ -2,7 +2,7 @@ import {useReducer} from 'react';
 import ProductosContext from './productosContext';
 import ProductosReducer from './productosReducer';
 
-import {CAMBIO_CATEGORIA,QUITAR_CATEGORIA} from '../types';
+import {CAMBIO_CATEGORIA,QUITAR_CATEGORIA} from '../../types';
 
 
 const ProductosState = (props) => {

@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import './Formulario.css';
 import { SpinnerCircular } from 'spinners-react';
-import axios from 'axios';
+import clienteAxios from '../../config/axios';
 
 const FormularioRegistro = () => {
 
@@ -41,7 +41,7 @@ const FormularioRegistro = () => {
         guardarCargando(true);
         e.preventDefault();
         try {
-            const respuesta = await axios.post('http://localhost:4000/api/usuarios/',{
+            const respuesta = await clienteAxios.post('/api/usuarios/',{
                 nombre: formulario.nombre,
                 apellido: formulario.apellido,
                 correo: formulario.correo,
@@ -75,14 +75,14 @@ const FormularioRegistro = () => {
 		});*/
     }
     return(
-        <div className="col"> 
+        <div> 
             <div className="formulario">
-            <form className="col-md-4" onSubmit={handleSubmit}>
+            <form className="col-lg-4 col-md-6" onSubmit={handleSubmit}>
                 <fieldset className="text-center">
                     <legend>Crear Cuenta</legend>
                 </fieldset>
                 <div className="col">
-                    <div className="row-md-4">
+                    <div className="row-md-4 row-lg-6">
                         <input
                             name="nombre"
                             className="form-control"
@@ -91,7 +91,7 @@ const FormularioRegistro = () => {
                             onChange={modificarFormulario}
                         />
                     </div>
-                    <div className="row-md-4 mt-2">
+                    <div className="row-md-4 row-lg-6 mt-2">
                         <input
                             name="apellido"
                             className="form-control"
@@ -100,7 +100,7 @@ const FormularioRegistro = () => {
                             onChange={modificarFormulario}
                         />
                     </div>
-                    <div className="row-md-4 mt-2">
+                    <div className="row-md-4 row-lg-6 mt-2">
                         <input
                             name="correo"
                             className="form-control"
@@ -109,7 +109,7 @@ const FormularioRegistro = () => {
                             onChange={modificarFormulario}
                         />
                     </div>
-                    <div className="row-md-4 mt-2">
+                    <div className="row-md-4 row-lg-6 mt-2">
                         <input
                             name="password"
                             className="form-control"
@@ -118,7 +118,7 @@ const FormularioRegistro = () => {
                             onChange={modificarFormulario}
                         />
                     </div>
-                    <div className="row-md-4 mt-2">
+                    <div className="row-md-4 row-lg-6 mt-2">
                         <input
                             name="confirmar"
                             className="form-control"
