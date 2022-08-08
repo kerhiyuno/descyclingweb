@@ -57,8 +57,3 @@ const QuienesSomos = () => {
     }
 
 export default QuienesSomos;
-
-
-/*<img src={cati} alt="" className="imagen1"/>
-          <img src={coni} alt="" className="imagen2"/>
-          <img src={seba} alt="" className="imagen3"/>*/

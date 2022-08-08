@@ -9,12 +9,10 @@ const FormularioInicioSesion = () => {
 
     const { guardarDatosLogin } = useContext(AuthContext);
 
-
     const [formulario, guardarFormulario] = useState({
         correo:'',
         password:'',
     })
-
 
     const [exito, guardarExito] = useState(false);
     const [error, guardarError] = useState(false);
@@ -66,11 +64,13 @@ const FormularioInicioSesion = () => {
                 password:'',
                 confirmar:''
             });
-            let token = respuesta.data.token;
+            let accessToken = respuesta.data.accessToken;
+            let refreshToken = respuesta.data.refreshToken;
             let correo = respuesta.data.usuario.correo;
             let nombre = respuesta.data.usuario.nombre;
             let google = respuesta.data.usuario.google;
-            localStorage.setItem('token', token);
+            localStorage.setItem('accessToken', accessToken);
+            localStorage.setItem('refreshToken', refreshToken);
             localStorage.setItem('correo', correo);
             localStorage.setItem('nombre', nombre);
             localStorage.setItem('google', google);
@@ -133,7 +133,7 @@ const FormularioInicioSesion = () => {
             </div>
             <div className="resultadocontacto">
                 {error ? <p className="alert alert-danger" role="alert"> Ha ocurrido un error</p> : null}
-                {exito ? <p className="alert alert-success" role="alert">El usuario ha sido registrado correctamente</p> : null}
+                {exito ? <p className="alert alert-success" role="alert">El usuario ha iniciado sesión correctamente</p> : null}
                 <SpinnerCircular enabled={cargando} />
             </div>
             <div className='col-md-2'>

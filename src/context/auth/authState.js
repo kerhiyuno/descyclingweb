@@ -10,16 +10,16 @@ const AuthState = ({children}) => {
     useEffect(() => {
         let correo = localStorage.getItem('correo');
         let nombre = localStorage.getItem('nombre');
-        let token = localStorage.getItem('token');
+        let accessToken = localStorage.getItem('accessToken');
         let google = localStorage.getItem('google');
         if (correo &&  nombre ){
-            datosDesdeLocalStorage(nombre,correo,token,google);
+            datosDesdeLocalStorage(nombre,correo,accessToken,google);
         }
     }, [])
     
 
     const initialState = {
-        token: '',
+        accessToken: '',
         autenticado: null,
         correo: null,
         nombre: null,
@@ -44,15 +44,15 @@ const AuthState = ({children}) => {
         );
     }
 
-    const datosDesdeLocalStorage = async (nombre,correo,token,google) => {
+    const datosDesdeLocalStorage = async (nombre,correo,accessToken,google) => {
 
         try {
             const headers = {
-                'x-token': token
+                'x-token': accessToken
               }
             const respuesta = await clienteAxios.get('/api/auth/',{headers});
             console.log(respuesta);
-            localStorage.setItem('token', respuesta.data.token);
+            localStorage.setItem('accessToken', respuesta.data.token);
         } catch (error) {
             console.log(error.response)
         }
@@ -73,7 +73,7 @@ const AuthState = ({children}) => {
     return (
         <AuthContext.Provider
             value={{
-                token: state.token,
+                accessToken: state.accessToken,
                 autenticado: state.autenticado,
                 correo: state.correo,
                 mensaje: state.mensaje,
