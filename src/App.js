@@ -7,7 +7,6 @@ import QuienesSomos from './components/QuienesSomos';
 import Historia from './components/Historia';
 import Blog from './components/Blog';
 import Contacto from './components/Contacto';
-import InicioSesion from './components/InicioSesion';
 import Registro from './components/Registro';
 import MiCuenta from './components/MiCuenta';
 import Barra from './components/layout/Barra';
@@ -31,7 +30,6 @@ function App() {
               <Route exact path="/Historia" element={<Historia />}/>
               <Route exact path="/Blog" element={<Blog />}/>
               <Route exact path="/Contacto" element={<Contacto />}/>
-              <Route exact path="/IniciarSesion" element={<InicioSesion />}/>
               <Route exact path="/Registro" element={<Registro />}/>
               <Route exact path="/MiCuenta" element={<MiCuenta />}/>
             </Routes>
