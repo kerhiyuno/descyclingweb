@@ -11,8 +11,8 @@ const Perfil = () => {
             <div className="col-xs-1" align="center">
                 <div className="col"> 
                     <div className='col-md-2'>
-                        dsadasdas
-                        { google ? <GoogleLoginBoton></GoogleLoginBoton> : 
+                        dsadasdas a {typeof(google)}
+                        { google ? (<GoogleLoginBoton></GoogleLoginBoton>) : 
                             <CerrarSesionBoton></CerrarSesionBoton>
                         }
                     </div>

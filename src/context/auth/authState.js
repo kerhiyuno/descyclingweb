@@ -13,7 +13,7 @@ const AuthState = ({children}) => {
         let accessToken = localStorage.getItem('accessToken');
         let google = localStorage.getItem('google');
         if (correo &&  nombre ){
-            datosDesdeLocalStorage(nombre,correo,accessToken,google);
+            datosDesdeLocalStorage(nombre,correo,accessToken,(google === 'true'));
         }
     }, [])
     
@@ -50,9 +50,9 @@ const AuthState = ({children}) => {
             const headers = {
                 'x-token': accessToken
               }
-            const respuesta = await clienteAxios.get('/api/auth/',{headers});
+            const respuesta = await clienteAxios.post('/api/auth/refresh-token',{headers});
             console.log(respuesta);
-            localStorage.setItem('accessToken', respuesta.data.token);
+            localStorage.setItem('accessToken', respuesta.data.accessToken);
         } catch (error) {
             console.log(error.response)
         }
