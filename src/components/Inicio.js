@@ -30,13 +30,13 @@ const Inicio = () => {
                 <Carousel.Item interval={2000}>
                     {ratio > 1 ? 
                     <img 
-                    className="d-block w-100 mt-5 p-0 imagenhorizontal"
+                    className="d-block w-100 mt-4 p-0 imagenhorizontal"
                     src={portada}
                     alt="Second slide"
                     />
                     :
                     <img 
-                    className="d-block w-100 mt-5 imagenvertical"
+                    className="d-block w-100 mt-4 imagenvertical"
                     src={portada}
                     alt="Second slide"
                     />
@@ -49,13 +49,13 @@ const Inicio = () => {
                 <Carousel.Item interval={2000}>
                     {ratio > 1 ? 
                     <img 
-                    className="d-block w-100 mt-5 imagenhorizontal"
+                    className="d-block w-100 mt-4 imagenhorizontal"
                     src={hacemos}
                     alt="Second slide"
                     />
                     :
                     <img 
-                    className="d-block w-100 mt-5 imagenvertical"
+                    className="d-block w-100 mt-4 imagenvertical"
                     src={hacemos}
                     alt="Second slide"
                     />
@@ -69,13 +69,13 @@ const Inicio = () => {
                 <Carousel.Item interval={2000}>
                     {ratio > 1 ? 
                     <img 
-                    className="d-block w-100 mt-5 imagenhorizontal"
+                    className="d-block w-100 mt-4 imagenhorizontal"
                     src={prueba}
                     alt="Second slide"
                     />
                     :
                     <img 
-                    className="d-block w-100 mt-5 imagenvertical"
+                    className="d-block w-100 mt-4 imagenvertical"
                     src={prueba}
                     alt="Second slide"
                     />

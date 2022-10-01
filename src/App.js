@@ -9,6 +9,9 @@ import Blog from './components/Blog';
 import Contacto from './components/Contacto';
 import Registro from './components/Registro';
 import MiCuenta from './components/MiCuenta';
+import NuevaPassword from './components/NuevaPassword';
+import OlvidePassword from './components/OlvidePassword';
+import ConfirmarCuenta from './components/ConfirmarCuenta';
 import Barra from './components/layout/Barra';
 import Footer from './components/layout/Footer';
 
@@ -32,6 +35,9 @@ function App() {
               <Route exact path="/Contacto" element={<Contacto />}/>
               <Route exact path="/Registro" element={<Registro />}/>
               <Route exact path="/MiCuenta" element={<MiCuenta />}/>
+              <Route exact path="/olvide-password/:token" element={<OlvidePassword/>}/>
+              <Route exact path="/confirmar/:id" element={<ConfirmarCuenta />}/>
+
             </Routes>
             <Footer/>
         </Container>

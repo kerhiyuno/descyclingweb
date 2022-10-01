@@ -16,6 +16,7 @@ const FormularioRegistro = () => {
     const [exito, guardarExito] = useState(false);
     const [error, guardarError] = useState(false);
     const [cargando, guardarCargando] = useState(false);
+    const [mensajeError, guardarMensajeError] = useState('');
 
 
     const onChange = async (value) => {
@@ -36,10 +37,20 @@ const FormularioRegistro = () => {
     }
 
     const handleSubmit = async (e) => {
+        e.preventDefault();
         guardarExito(false);
         guardarError(false);
+        if(Object.values(formulario).includes('')){
+            guardarMensajeError('Todos los campos son obligatorios');
+            guardarError(true);
+            return;
+        }
+        if(formulario.confirmar != formulario.password){
+            guardarMensajeError('Las contraseñas deben ser iguales');
+            guardarError(true);
+            return;
+        }
         guardarCargando(true);
-        e.preventDefault();
         try {
             const respuesta = await clienteAxios.post('/api/usuarios/',{
                 nombre: formulario.nombre,
@@ -60,6 +71,7 @@ const FormularioRegistro = () => {
         } catch (error) {
             console.log(error);
             console.log(error.response);
+            guardarMensajeError(error.response.msg);
             guardarError(true);
         }
         guardarCargando(false);
@@ -141,8 +153,8 @@ const FormularioRegistro = () => {
             </form>
             </div>
             <div className="resultadocontacto">
-                {error ? <p className="alert alert-danger" role="alert">Ha ocurrido un error</p> : null}
-                {exito ? <p className="alert alert-success" role="alert">El usuario ha sido registrado correctamente</p> : null}
+                {error && <p className="alert alert-danger" role="alert">{mensajeError}</p>}
+                {exito && <p className="alert alert-success" role="alert">El usuario ha sido registrado correctamente</p>}
                 <SpinnerCircular enabled={cargando} />
             </div>
         </div>
