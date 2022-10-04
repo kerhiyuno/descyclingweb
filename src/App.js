@@ -36,7 +36,7 @@ function App() {
               <Route exact path="/Registro" element={<Registro />}/>
               <Route exact path="/MiCuenta" element={<MiCuenta />}/>
               <Route exact path="/olvide-password/:token" element={<OlvidePassword/>}/>
-              <Route exact path="/confirmar/:id" element={<ConfirmarCuenta />}/>
+              <Route exact path="/confirmar/:token" element={<ConfirmarCuenta />}/>
 
             </Routes>
             <Footer/>
