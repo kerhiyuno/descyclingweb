@@ -12,14 +12,20 @@ const OlvidePassword = () => {
     
     const [exito, guardarExito] = useState(false);
     const [error, guardarError] = useState(false);
+    const [mensajeError, guardarMensajeError] = useState(false);
 
     const handleSubmit = async (e) => {
+        e.preventDefault();
         guardarExito(false);
         guardarError(false);
         guardarCargando(true);
-        e.preventDefault();
+        if (correo === '' || correo.length < 6){
+            guardarMensajeError('Todos los campos son obligatorios');
+            guardarError(true);
+            return;
+        }
         try {
-            const respuesta = await clienteAxios.post('/api/usuarios/',{
+            const respuesta = await clienteAxios.post('/api/usuarios/olvide-password',{
                 correo
             });
             console.log(respuesta);
@@ -28,6 +34,7 @@ const OlvidePassword = () => {
         } catch (error) {
             console.log(error);
             console.log(error.response);
+            guardarMensajeError('Ha ocurrido un error')
             guardarError(true);
         }
         guardarCargando(false);
@@ -59,6 +66,7 @@ const OlvidePassword = () => {
                                 type="text"
                                 placeholder="Ingresa tu correo"
                                 onChange={(e) => guardarCorreo(e.target.value)}
+                                value={correo}
                             />
                         </div>
                     </div>
@@ -72,8 +80,8 @@ const OlvidePassword = () => {
                 </form>
                 </div>
                 <div className="resultadocontacto">
-                    {error ? <p className="alert alert-danger" role="alert">Ha ocurrido un error</p> : null}
-                    {exito ? <p className="alert alert-success" role="alert">El usuario ha sido registrado correctamente</p> : null}
+                    {error ? <p className="alert alert-danger" role="alert">{mensajeError}</p> : null}
+                    {exito ? <p className="alert alert-success" role="alert">Solicitud enviada correctamente</p> : null}
                     <SpinnerCircular enabled={cargando} />
                 </div>
             </div>
