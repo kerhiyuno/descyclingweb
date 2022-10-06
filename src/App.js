@@ -35,7 +35,8 @@ function App() {
               <Route exact path="/Contacto" element={<Contacto />}/>
               <Route exact path="/Registro" element={<Registro />}/>
               <Route exact path="/MiCuenta" element={<MiCuenta />}/>
-              <Route exact path="/olvide-password/:token" element={<OlvidePassword/>}/>
+              <Route exact path="/olvide-password/" element={<OlvidePassword/>}/>
+              <Route exact path="/nueva-password/:token" element={<NuevaPassword/>}/>
               <Route exact path="/confirmar/:token" element={<ConfirmarCuenta />}/>
 
             </Routes>

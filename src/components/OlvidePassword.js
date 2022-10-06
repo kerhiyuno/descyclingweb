@@ -12,11 +12,11 @@ const OlvidePassword = () => {
     
     const [exito, guardarExito] = useState(false);
     const [error, guardarError] = useState(false);
-    const [mensajeError, guardarMensajeError] = useState(false);
+    const [mensajeError, guardarMensajeError] = useState('');
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        guardarExito(false);
+        guardarExito();
         guardarError(false);
         guardarCargando(true);
         if (correo === '' || correo.length < 6){
@@ -25,14 +25,13 @@ const OlvidePassword = () => {
             return;
         }
         try {
-            const respuesta = await clienteAxios.post('/api/usuarios/olvide-password',{
+            const { data } = await clienteAxios.post('/api/usuarios/olvide-password',{
                 correo
             });
-            console.log(respuesta);
+            console.log(data);
             guardarExito(true);
             guardarCorreo('');
         } catch (error) {
-            console.log(error);
             console.log(error.response);
             guardarMensajeError('Ha ocurrido un error')
             guardarError(true);

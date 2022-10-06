@@ -1,9 +1,30 @@
-import {useState} from 'react';
-import { useNavigate } from 'react-router-dom';
+import {useState, useEffect} from 'react';
+import { useNavigate, useParams} from 'react-router-dom';
 import { SpinnerCircular } from 'spinners-react';
 import clienteAxios from '../config/axios';
 
 const NuevaPassword = () => {
+
+    const [ tokenValido, setTokenValido] = useState(false);
+    const { token } = useParams();
+    const navigate = useNavigate();
+
+    useEffect(() => {
+      const comprobarToken = async () => {
+        try {
+            const { data } = await clienteAxios.get(`/api/usuarios/olvide-password/${token}`);
+            console.log(data);
+            setTokenValido(true);
+        } catch (error) {
+            console.log(error.response);
+            guardarMensajeError("token no valido");
+        }
+      }
+      comprobarToken();
+
+    }, [])
+    
+
     const [formulario, guardarFormulario] = useState({
         password:'',
         confirmar:''
@@ -31,6 +52,11 @@ const NuevaPassword = () => {
             guardarMensajeError('Todos los campos son obligatorios');
             return;
         }
+        if(formulario.password.length < 6){
+            guardarMensajeError('La contraseña debe ser de un largo mayor a 5');
+            guardarError(true);
+            return;
+        }
         if(formulario.confirmar != formulario.password){
             guardarMensajeError('Las contraseñas deben ser iguales');
             guardarError(true);
@@ -38,10 +64,10 @@ const NuevaPassword = () => {
         }
         guardarCargando(true);
         try {
-            const respuesta = await clienteAxios.post('/api/usuarios/',{
+            const { data } = await clienteAxios.post(`/api/usuarios/olvide-password/${token}`,{
                 password: formulario.password
             });
-            console.log(respuesta);
+            console.log(data);
             guardarExito(true);
             guardarFormulario({
                 password:'',
@@ -70,7 +96,8 @@ const NuevaPassword = () => {
         <div className="container" style={{marginBottom: "13%"}}>
             <div className="mt-5" align="center">
                 <div className="formulario">
-                <form className="col-lg-4 col-md-6" onSubmit={handleSubmit}>
+                {tokenValido && (
+                    <form className="col-lg-4 col-md-6" onSubmit={handleSubmit}>
                     <fieldset className="text-center">
                         <legend>Escribe tu nueva contraseña</legend>
                     </fieldset>
@@ -81,6 +108,7 @@ const NuevaPassword = () => {
                                 className="form-control"
                                 type="password"
                                 placeholder="Ingresa tu contraseña"
+                                value={formulario.password}
                                 onChange={modificarFormulario}
                             />
                         </div>
@@ -90,6 +118,7 @@ const NuevaPassword = () => {
                                 className="form-control"
                                 type="password"
                                 placeholder="Confirmar contraseña"
+                                value={formulario.confirmar}
                                 onChange={modificarFormulario}
                             />
                         </div>
@@ -102,10 +131,18 @@ const NuevaPassword = () => {
                         />
                     </div>
                 </form>
+                )}
+            
                 </div>
                 <div className="resultadocontacto">
                     {error && <p className="alert alert-danger" role="alert">{mensajeError}</p>}
-                    {exito && <p className="alert alert-success" role="alert">Contraseña cambiada correctamente</p>}
+                    {exito ?
+                        (<div>
+                            <p className="alert alert-success" role="alert">Contraseña cambiada correctamente</p>
+                            <button type="button" className= "btn btn-success"  onClick={() =>{navigate('/MiCuenta')}}>Iniciar Sesion</button>
+                         </div>
+                        ) 
+                    : null}
                     <SpinnerCircular enabled={cargando} />
                 </div>
             </div>
