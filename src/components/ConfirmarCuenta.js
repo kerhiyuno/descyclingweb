@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import {useParams, Link} from 'react-router-dom';
 import clienteAxios from '../config/axios';
 import { useNavigate } from 'react-router-dom';
+import './ConfirmarCuenta.css';
+
 
 const ConfirmarCuenta = () => {
 
@@ -27,7 +29,7 @@ const ConfirmarCuenta = () => {
     
 
     return (
-        <div>
+        <div className='alertaresultado mt-5'>
         {error && !cargando && <p className="alert alert-danger" role="alert">El token no es válido</p>}
         {!error && !cargando && (
         <div>

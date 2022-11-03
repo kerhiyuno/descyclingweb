@@ -8,6 +8,7 @@ import Historia from './components/Historia';
 import Blog from './components/Blog';
 import Contacto from './components/Contacto';
 import Registro from './components/Registro';
+import InicioSesion from './components/InicioSesion';
 import MiCuenta from './components/MiCuenta';
 import NuevaPassword from './components/NuevaPassword';
 import OlvidePassword from './components/OlvidePassword';
@@ -38,7 +39,7 @@ function App() {
               <Route exact path="/olvide-password/" element={<OlvidePassword/>}/>
               <Route exact path="/nueva-password/:token" element={<NuevaPassword/>}/>
               <Route exact path="/confirmar/:token" element={<ConfirmarCuenta />}/>
-
+              <Route exact path="/IniciarSesion" element={<InicioSesion />}/>
             </Routes>
             <Footer/>
         </Container>

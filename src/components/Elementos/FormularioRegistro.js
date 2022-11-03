@@ -71,7 +71,7 @@ const FormularioRegistro = () => {
         } catch (error) {
             console.log(error);
             console.log(error.response);
-            guardarMensajeError(error.response.msg);
+            guardarMensajeError(error.response.data.errors[0].msg);
             guardarError(true);
         }
         guardarCargando(false);
