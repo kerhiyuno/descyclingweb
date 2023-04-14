@@ -10,7 +10,7 @@ import {
   NavLink,
 } from 'reactstrap';
 
-import logo from '../../img/logo.jpg';
+import logo from '../../img/logo.png';
 import AuthContext from '../../context/auth/authContext';
 
 const Barra = (props) => {
@@ -25,8 +25,8 @@ const Barra = (props) => {
 
   return (
     <div>
-    <Navbar  className="fixed-top navbarsize" style={{backgroundColor: 'white'}} expand="lg">
-        <NavbarBrand href="/" style={{marginLeft: "4%", paddingRight: "20¡¡0px"}}>
+    <Navbar  className="fixed-top navbarsize" style={{backgroundColor: '#105157'}} expand="lg">
+        <NavbarBrand href="/" style={{marginLeft: "4%", paddingRight: "0px"}}>
                   <img src={logo} alt="" width="200"/>
               </NavbarBrand>
         <NavbarToggler className="NavToogler-empaty" onClick={toggle} />
@@ -36,16 +36,13 @@ const Barra = (props) => {
                     <NavLink className="NavLink-empaty" href="/">Inicio</NavLink>
                 </NavItem>
                 <NavItem>
-                    <NavLink className="NavLink-empaty" href="/Productos">Productos</NavLink>
-                </NavItem>
-                <NavItem>
                     <NavLink className="NavLink-empaty" href="/QuienesSomos">Quienes somos</NavLink>
                 </NavItem>
                 <NavItem>
-                    <NavLink className="NavLink-empaty" href="/Historia">Historia</NavLink>
+                    <NavLink className="NavLink-empaty" href="/Productos">Productos y gestión</NavLink>
                 </NavItem>
                 <NavItem>
-                    <NavLink className="NavLink-empaty" href="/Blog">Blog de Reciclaje</NavLink>
+                    <NavLink className="NavLink-empaty" href="/Blog">Blog</NavLink>
                 </NavItem>
                 <NavItem>
                     <NavLink className="NavLink-empaty" href="/Contacto">Contacto</NavLink>
@@ -53,14 +50,15 @@ const Barra = (props) => {
                 <NavItem>
                     <NavLink className="NavLink-empaty" href="/MiCuenta">{ autenticado ? ('Mi cuenta') : ('Iniciar Sesión')}</NavLink>
                 </NavItem>
+                <NavItem>
+                    <NavLink className="NavLink-empaty" href="/Carrito">Carrito</NavLink>
+                </NavItem>
             </Nav>
         {isOpen ? (
             <div className="barraverdecollapse">
             </div>): null}
         </Collapse>
     </Navbar>
-    <div className="barraverde">
-        </div>
 </div>
   );
 }

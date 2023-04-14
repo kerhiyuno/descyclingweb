@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import {useParams, Link} from 'react-router-dom';
+import {useParams} from 'react-router-dom';
 import clienteAxios from '../config/axios';
 import { useNavigate } from 'react-router-dom';
 import './ConfirmarCuenta.css';
@@ -25,14 +25,14 @@ const ConfirmarCuenta = () => {
             guardarCargando(false);
         }
         confirmarCuenta();
-    }, [])
+    }, [token])
     
 
     return (
         <div className='alertaresultado mt-5'>
         {error && !cargando && <p className="alert alert-danger" role="alert">El token no es válido</p>}
         {!error && !cargando && (
-        <div>
+        <div className='d-flex justify-content-center flex-column align-items-center'>
             <p className="alert alert-success" role="alert">Usuario validado correctamente</p>
             <button type="button" className= "btn btn-success"  onClick={() =>{navigate('/MiCuenta')}}>Iniciar Sesion</button>
         </div>)}

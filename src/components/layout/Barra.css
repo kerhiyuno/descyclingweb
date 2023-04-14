@@ -1,23 +1,24 @@
 .navbar-global{
-    color: #167067;
+    color: #105157;
     background: black;
 }
 .NavToogler-empaty{
     color: white !important;
-    border-color: #167067 !important;
-    background-color: #167067 !important;
+    border-color: white !important;
+    background-color: #105157 !important;
     margin-right: 30px;
 }
 
 .NavLink-empaty{
-    color: #167067 !important;
+    color: white !important;
     max-width: auto;
     text-align: center;
     border-radius: 15px;
+    margin: 10px;
 }
 
 .NavLink-empaty:hover{
-    color: #167067 !important;
+    color: #105157 !important;
     cursor: pointer;
     background: white !important;
 }
@@ -30,13 +31,13 @@
 
 .Nav-dropdown{
     background: white !important;
-    color: #167067 !important;
+    color: #105157 !important;
     max-width: 200px;
 }
 
 .Nav-dropdown:hover{
     background:white !important;
-    color: #167067 !important;
+    color: #105157 !important;
     border-radius: 15px;
     cursor: pointer;
 }
@@ -53,16 +54,6 @@
     max-width: 200px;
 }
 
-.contador {
-    position: absolute;
-    top: -3px;
-    right: -5px;
-    padding: 5px 10px;
-    border-radius: 50%;
-    background: #be6d16;
-    color: #167067;
-}
-
 .logout{
     min-width: 70px;
     text-align: center;
@@ -70,28 +61,17 @@
     background: #1e9488;
     border-radius: 10px;
     border: none;
-    color: #167067 !important;
+    color: #105157 !important;
 }
+
 .navbar-center {
     position: absolute;
     left: 50%;
     transform: translatex(-50%);
 }
 
-.barraverde{
-    background-color: #167067;
-    min-height: 11vh;
-    height: auto;
-    width:auto;
-}
 
 .navbarsize{
     width: auto;
 }
 
-.barraverdecollapse{
-    background-color: #167067;
-    min-height: 1px;
-    height: auto;
-    width:auto;
-}

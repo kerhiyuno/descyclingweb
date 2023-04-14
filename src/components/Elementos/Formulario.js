@@ -55,9 +55,6 @@ const Formulario = () => {
         <div> 
             <div className="formulario">
             <form className="col-lg-4 col-md-6" onSubmit={handleSubmit}>
-                <fieldset className="text-center">
-                    <legend>¿Quieres cotizar un nuevo proyecto?</legend>
-                </fieldset>
                 <div className="col">
                     <div className="row-lg-4 row-md-6">
                         <input

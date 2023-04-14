@@ -4,56 +4,64 @@
 }
 
 .bloqueproductos{
-    background-color: white;
-    color: black;
-    margin: 10px auto;
-    padding: 10px;
-    min-width: 300px;
-    max-width: 1500px;
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 16px;
-    position: relative;
-    box-shadow: 0 6px 6px rgba(0,0,0,0.15);
-  }
+  background-color: white;
+  color: black;
+  margin: 10px auto;
+  padding: 10px;
+  min-width: 300px;
+  max-width: 1400px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  position: relative;
+  box-shadow: 0 6px 6px rgba(0,0,0,0.15);
+}
+
 .bloqueestadisticas{
-    background-color: #e6e6e6;
-    color: black;
-    margin: 10px auto;
-    margin-top: 5vh;
-    padding: 20px;
-    min-width: 300px;
-    max-width: auto;
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 16px;
-    position: relative;
-    box-shadow: 0 6px 6px rgba(0,0,0,0.15);
-  }
+  background-color: #e6e6e6;
+  color: black;
+  margin: 10px auto;
+  margin-top: 5vh;
+  padding: 20px;
+  min-width: 300px;
+  max-width: auto;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  position: relative;
+  box-shadow: 0 6px 6px rgba(0,0,0,0.15);
+}
+
 .bloquetotal{
-    background-color: #167067;
-    min-height: 20vh;
-    height: auto;
-    color: white;
-    width:auto;
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 16px;
-    position: relative;
-    box-shadow: 0 6px 6px rgba(0,0,0,0.15);
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #105157;
+  min-height: 20vh;
+  height: auto;
+  color: white;
+  width: auto;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  position: relative;
+  box-shadow: 0 6px 6px rgba(0,0,0,0.15);
+}
 
 .botonSecciones{
-    background-color: #167067;
-    color: white;
-    text-decoration: none;
-    border: 0px;
-    border-radius: 30px;
+  background-color: #105157;
+  color: white;
+  text-decoration: none;
+  border: 0px;
+  border-radius: 30px;
+  width: 100%;
 }
+
 .botonSecciones:hover {
   background-color: green;
 }
 
 h3{
   text-align: center;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 p{
@@ -61,7 +69,15 @@ p{
 }
 
 h1{
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
+}
+
+h2{
+  font-family: 'Poppins', sans-serif;
+}
+
+h5{
+  font-family: 'Poppins', sans-serif;
 }
 
 .botones{
@@ -70,7 +86,7 @@ h1{
 }
 
 .imagenhorizontal{
-  max-height: 700px;
+  max-height: 650px;
 }
 .imagenvertical{
   height: 300px;
@@ -78,8 +94,9 @@ h1{
 }
 
 .imagenSecciones {
-  border-radius: 8%;
-  width: auto;
+  border-radius: 10%;
+  max-width: 250px;
+  width: 80%;
   margin-left: auto;
   margin-right: auto;
   display: block;
@@ -93,7 +110,6 @@ h1{
   display: flex;
   justify-content: center;
   padding: 20px;
-  margin: 20px;
   justify-self: center;
 }
 
@@ -106,37 +122,14 @@ h1{
   font-size: 30px;
 }
 
-.parrafodescriptivo{
-  min-width: 280px;
-  max-width: 350px;
-  text-align: justify;
-  margin: 0 auto;
-  font-size: 17px;
-}
 
-.imagenparrafo{
-  border-radius: 10%;
-  min-width: 280px;
-  max-width: 350px;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-}
-
-.bloquedescripcion{
+.bloquedescripcion {
   background-color: white;
   color: black;
   margin: 10px auto;
-  min-width: 300px;
-  max-width: 1800px;
+  min-width: 250px;
+  max-width: 1600px;
   font-family: 'Josefin Sans', sans-serif;
   font-size: 16px;
   position: relative;
-}
-
-
-.bloqueimagendescripcion {
-  padding: 20px;
-  margin: 20px;
-  box-shadow: 0 6px 6px rgba(0,0,0,0.15);
 }

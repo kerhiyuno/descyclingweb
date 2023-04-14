@@ -16,36 +16,6 @@ const PaginaProductos = (props) => {
     const [listaMostrar, guardarListaMostrar] = useState([])
 
 
-    useEffect(()=>{
-        obtenerProductos();
-        obtenerCategorias();
-		// eslint-disable-next-line react-hooks/exhaustive-deps
-    },[])
-
-    useEffect(() => {
-		if (listaCategorias.length){
-			if (categorias[0]==="todos"){
-				guardarListaMostrar(ListaProductos);
-			}
-			else {
-				let nuevoListado = [];
-				categorias.forEach(categoria => nuevoListado.push(ListaProductos.filter(producto => producto.categoria.nombre === categoria)));
-				console.log("nuevo listado", nuevoListado.flat());
-				guardarListaMostrar(nuevoListado.flat());
-			}
-		}
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [categorias,ListaProductos]);
-
-    useEffect(() => {
-    	if (listaCategorias.length){
-        	cambiosListaBotones();
-        }
-      // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [categorias,listaCategorias])
-
-
-
     const obtenerCategorias= async () => {
         try {
         	const respuesta = await clienteAxios.get('/api/categorias/');
@@ -74,10 +44,39 @@ const PaginaProductos = (props) => {
     	</button>)}))
     }
 
+    useEffect(()=>{
+      obtenerProductos();
+      obtenerCategorias();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    },[])
+
+    useEffect(() => {
+        if (listaCategorias.length){
+            if (categorias[0]==="todos"){
+                guardarListaMostrar(ListaProductos);
+            } else {
+                let nuevoListado = [];
+                categorias.forEach(categoria => nuevoListado.push(ListaProductos.filter(producto => producto.categoria.nombre === categoria)));
+                console.log("nuevo listado", nuevoListado.flat());
+                guardarListaMostrar(nuevoListado.flat());
+            }
+        } else {
+                guardarListaMostrar(ListaProductos);
+        }
+     // eslint-disable-next-line react-hooks/exhaustive-deps
+     }, [categorias,ListaProductos]);
+
+    useEffect(() => {
+        if (listaCategorias.length){
+            cambiosListaBotones();
+          }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [categorias,listaCategorias])
+
     return(
-      <div className="col-12 p-5 mt-3">
+      <div className="col-12 p-5 mt-5">
         <h1>Nuestros productos</h1>
-            <div className="d-flex flex-wrap justify-content-center mb-5">
+            <div className="d-flex flex-wrap justify-content-center mb-5 mt-5">
               <button className={`botoncategorias m-1 ${categorias.includes("todos") ? "pulsado" : "nopulsado"}`} onClick={()=>{cambioCategoria("todos")}}>Todos los productos</button>
               {listaBotones}
             </div>

@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { Carousel } from 'react-bootstrap';
 import ProductosContext from '../context/productos/productosContext';
 import ReactPlayer from 'react-player';
+import DescripcionDescycling from './inicio/DescripcionDescycling';
 
 import baldosas from '../img/baldosas.jpg';
 import otros from '../img/Maceteros/otros.jpeg';
@@ -88,7 +89,7 @@ const Inicio = () => {
                 </Carousel.Item>
                 </Carousel>
             <div className="bloqueproductos mt-5 mb-5">
-                <h1>INNOVACIÓN CIRCULAR </h1>
+                <h3>INNOVACIÓN CIRCULAR </h3>
                 <p>¿Quieres aportar con un granito de arena a reducir la contaminación? Conoce nuestros productos sustentables</p>
                 <div className="container-fluid">
                         <div className="row botones">
@@ -96,19 +97,19 @@ const Inicio = () => {
                                 <div className='col'>
                                     <div className='row'>
                                         <img src={baldosas} className="imagenSecciones" alt="" onClick={() =>{cambioCategoria("baldosa");navigate('/Productos')}}/>
-                                    </div>
-                                    <div className='row mt-1'>
-                                        <button type="button" className= "botonSecciones"  onClick={() =>{cambioCategoria("baldosa");navigate('/Productos')}}>Baldosas</button>
+                                        <div className='d-flex justify-content-center mt-1'>
+                                            <button type="button" className= "botonSecciones"  onClick={() =>{cambioCategoria("baldosa");navigate('/Productos')}}>Baldosas</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div className="col bloqueimagenboton">
-                                <div className='col'>
+                                <div className='col-'>
                                         <div className='row'>
                                             <img src={maceteros} className="imagenSecciones" alt="" onClick={() =>{cambioCategoria("baldosa");navigate('/Productos')}}/>
-                                        </div>
-                                        <div className='row mt-1'>
-                                            <button type="button" className= "botonSecciones"  onClick={() =>{cambioCategoria("macetero");navigate('/Productos')}}>Maceteros</button>
+                                            <div className='d-flex justify-content-center mt-1'>
+                                                <button type="button" className= "botonSecciones"  onClick={() =>{cambioCategoria("macetero");navigate('/Productos')}}>Maceteros</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -116,9 +117,9 @@ const Inicio = () => {
                                 <div className='col'>
                                         <div className='row'>
                                             <img src={otros} className="imagenSecciones" alt="" onClick={() =>{cambioCategoria("baldosa");navigate('/Productos')}}/>
-                                        </div>
-                                        <div className='row mt-1'>
-                                            <button type="button" className= "botonSecciones"  onClick={() =>{cambioCategoria("otro");navigate('/Productos')}}>Otros</button>
+                                            <div className='d-flex justify-content-center mt-1'>
+                                                <button type="button" className= "botonSecciones"  onClick={() =>{cambioCategoria("otro");navigate('/Productos')}}>Otros</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -138,20 +139,22 @@ const Inicio = () => {
             </div>
             <div  className="bloquedescripcion mb-5 mt-5">
                 <div className="container-fluid">
-                    <div className="row">
-                        <div className="col bloqueimagendescripcion">
-                            <h2 className="text-center">¡Reciclamos 300g de residuos en productos!</h2>
-                            <img src={maceteros} className="imagenparrafo" alt=""/>           
-                            <p className="parrafodescriptivo mt-2">Siguiendo el modelo de economía circular, transformamos lo que para tí es basura en insumos claves dentro de nuestra composición de
-                                            50% vidrio triturado, cemento y agregados de caucho y plástico
-                            </p>
-                        </div>
-                        <div className="col bloqueimagendescripcion">
-                            <h2 className="text-center">¿Por qué elegir descycling?</h2>
-                            <img src={maceteros} className="imagenparrafo" alt=""/>
-                            <p className="parrafodescriptivo mt-2">Descycling es la nueva forma de gestionar y revalorizar tus residuos de forma fácil, personalizada y transparente
-                            </p>
-                        </div>
+                    <div className="row justify-content-center">
+                        <DescripcionDescycling titulo = "Vidrio 100% reciclable" 
+                                        descripcion = "Nueva forma de gestionar y revalorizar tus residuos de vidrio de forma fácil, personalizada y transparente"
+                                        imagen={maceteros}/>
+                        <DescripcionDescycling titulo = "Economía circular" 
+                                        descripcion = "Buscamos incorporarnos como revalorizadores dentro de la cadena productiva que establece la nueva Ley REP"
+                                        imagen={maceteros}/>
+                        <DescripcionDescycling titulo = "Composición versátil" 
+                                        descripcion = "A partir de la combinación de residuos de vidrio, plástico y caucho Descycling es capaz de crear nuevos ciclos de vida"
+                                        imagen={maceteros}/>
+                        <DescripcionDescycling titulo = "Romper lo tradicional" 
+                                        descripcion = "La incorporación de residuos permite eliminar el uso de arenas y piedras, además de reducir cemento en un 50%"
+                                        imagen={maceteros}/>
+                        <DescripcionDescycling titulo = "Únicos en Chile" 
+                                        descripcion = "Creamos productos únicos con resistencia y personalidad para toda persona que desee dar sentido a sus espacios"
+                                        imagen={maceteros}/>
                     </div>
                 </div>
             </div>
@@ -186,9 +189,9 @@ const Inicio = () => {
                                 <div className='col'>
                                     <div className='row'>
                                         <img src={baldosas} className="imagenSecciones" alt=""/>
-                                    </div>
-                                    <div className='row mt-1'>
-                                        <button type="button" className= "botonSecciones"  onClick={() =>{cambioCategoria("baldosa");navigate('/Productos')}}>Planes</button>
+                                        <div className='d-flex justify-content-center  mt-1'>
+                                            <button type="button" className= "botonSecciones"  onClick={() =>{cambioCategoria("baldosa");navigate('/Productos')}}>Planes</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -196,9 +199,9 @@ const Inicio = () => {
                                 <div className='col'>
                                         <div className='row'>
                                             <img src={maceteros} className="imagenSecciones" alt=""/>
-                                        </div>
-                                        <div className='row mt-1'>
-                                            <button type="button" className= "botonSecciones"  onClick={() =>{cambioCategoria("macetero");navigate('/Productos')}}>Recolección única</button>
+                                            <div className='d-flex justify-content-center mt-1'>
+                                                <button type="button" className= "botonSecciones"  onClick={() =>{cambioCategoria("macetero");navigate('/Productos')}}>Recolección única</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -206,9 +209,9 @@ const Inicio = () => {
                                 <div className='col'>
                                         <div className='row'>
                                             <img src={otros} className="imagenSecciones" alt=""/>
-                                        </div>
-                                        <div className='row mt-1'>
-                                            <button type="button" className= "botonSecciones"  onClick={() =>{cambioCategoria("otro");navigate('/Productos')}}>Contacto</button>
+                                            <div className='d-flex justify-content-center mt-1'>
+                                                <button type="button" className= "botonSecciones"  onClick={() =>{cambioCategoria("otro");navigate('/Productos')}}>Contacto</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

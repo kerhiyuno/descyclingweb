@@ -8,7 +8,6 @@ import clienteAxios from '../../config/axios';
 const FormularioInicioSesion = () => {
 
     const { guardarDatosLogin } = useContext(AuthContext);
-
     const [formulario, guardarFormulario] = useState({
         correo:'',
         password:'',

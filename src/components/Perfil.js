@@ -4,14 +4,15 @@ import GoogleLoginBoton from "./Elementos/GoogleLoginBoton";
 import CerrarSesionBoton from "./Elementos/CerrarSesionBoton";
 
 const Perfil = () => {
-    const { google } = useContext(AuthContext);
+    const { google, nombre } = useContext(AuthContext);
     console.log(google);
     return(
-        <div className="container" style={{marginBottom: "13%"}}>
+        <div className="container" style={{marginBottom: "20%"}}>
+            <h1 className="mb-5 mt-5">Mi cuenta</h1>
             <div className="col-xs-1" align="center">
                 <div className="col"> 
                     <div className='col-md-2'>
-                        dsadasdas a {typeof(google)}
+                        <p>Nombre: {nombre}</p>
                         { google ? (<GoogleLoginBoton></GoogleLoginBoton>) : 
                             <CerrarSesionBoton></CerrarSesionBoton>
                         }

@@ -78,6 +78,7 @@ const AuthState = ({children}) => {
                 correo: state.correo,
                 mensaje: state.mensaje,
                 google: state.google,
+                nombre: state.nombre,
                 usuarioAutenticado,
                 guardarDatosLogin,
                 datosDesdeLocalStorage,

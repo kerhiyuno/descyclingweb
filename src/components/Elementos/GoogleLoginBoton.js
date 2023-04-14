@@ -12,7 +12,8 @@ const GoogleLoginBoton = () => {
     const { guardarDatosLogin, autenticado, google} = useContext(AuthContext);
 
     console.log(google);
-    
+    console.log("hola");
+
     async function  handleCredentialResponse(response) {
         console.log('id token', response);
         try {

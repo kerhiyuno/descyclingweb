@@ -13,12 +13,15 @@ import MiCuenta from './components/MiCuenta';
 import NuevaPassword from './components/NuevaPassword';
 import OlvidePassword from './components/OlvidePassword';
 import ConfirmarCuenta from './components/ConfirmarCuenta';
+import Item from './components/Item';
 import Barra from './components/layout/Barra';
 import Footer from './components/layout/Footer';
+import Carrito from './components/Carrito';
 
 import ProductosState from './context/productos/productosState';
 import AuthState from './context/auth/authState';
 
+import "@fontsource/poppins";
 
 function App() {
   return (
@@ -30,6 +33,7 @@ function App() {
             <Routes>
               <Route exact path="/" element={<Inicio />}/>
               <Route exact path="/Productos" element={<PaginaProductos />}/>
+              <Route exact path="/Productos/:item" element={<Item />}/>
               <Route exact path="/QuienesSomos" element={<QuienesSomos />}/>
               <Route exact path="/Historia" element={<Historia />}/>
               <Route exact path="/Blog" element={<Blog />}/>
@@ -40,6 +44,7 @@ function App() {
               <Route exact path="/nueva-password/:token" element={<NuevaPassword/>}/>
               <Route exact path="/confirmar/:token" element={<ConfirmarCuenta />}/>
               <Route exact path="/IniciarSesion" element={<InicioSesion />}/>
+              <Route exact path="/Carrito" element={<Carrito />}/>
             </Routes>
             <Footer/>
         </Container>
