@@ -13,7 +13,7 @@ import MiCuenta from './components/MiCuenta';
 import NuevaPassword from './components/NuevaPassword';
 import OlvidePassword from './components/OlvidePassword';
 import ConfirmarCuenta from './components/ConfirmarCuenta';
-import Item from './components/Item';
+import DetalleProducto from './components/productos/DetalleProducto';
 import Barra from './components/layout/Barra';
 import Footer from './components/layout/Footer';
 import Carrito from './components/Carrito';
@@ -33,7 +33,7 @@ function App() {
             <Routes>
               <Route exact path="/" element={<Inicio />}/>
               <Route exact path="/Productos" element={<PaginaProductos />}/>
-              <Route exact path="/Productos/:item" element={<Item />}/>
+              <Route exact path="/Productos/:id" element={<DetalleProducto />}/>
               <Route exact path="/QuienesSomos" element={<QuienesSomos />}/>
               <Route exact path="/Historia" element={<Historia />}/>
               <Route exact path="/Blog" element={<Blog />}/>

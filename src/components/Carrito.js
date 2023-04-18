@@ -3,7 +3,7 @@ import './Carrito.css';
 const Carrito = () => {
 
     return(
-        <main className="container">
+        <main className="container p-5">
            <h1 className='mt-5'>Carrito de compras</h1>
            <div className="contenido">
                 <div className='carrito'>

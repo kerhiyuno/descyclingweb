@@ -1,4 +1,4 @@
-import Producto from './Producto';
+import TarjetaProducto from './TarjetaProducto';
 
 const ListadoProductos = ({productos}) => {
     console.log(productos);
@@ -6,7 +6,7 @@ const ListadoProductos = ({productos}) => {
         <div className="row justify-content-center">
           { productos.length > 0 ? (          
               productos.map(producto => (
-                <Producto 
+                <TarjetaProducto 
                   key={producto.id}
                   producto={producto}
                 />

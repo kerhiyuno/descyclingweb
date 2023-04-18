@@ -1,8 +1,7 @@
 import './Producto.css';
-import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const Producto = ({producto}) => {
+const TarjetaProducto = ({producto}) => {
     const navigate = useNavigate();
     const {id,nombre,descripcion,imagen} = producto;
     console.log(imagen, nombre);
@@ -12,13 +11,13 @@ const Producto = ({producto}) => {
                 <h3>{nombre}</h3>
                 <img src={imagen} className="card-img-top imagen" alt=""/>
                 <p>{descripcion}</p>
-                <div className="row center botonesproducto">
-                    <button type="button" className= "botonopciones" >Detalles</button>
-                    <button type="button" className= "botonopciones" onClick={() => (navigate(`/Productos/${id}`))} >Comprar</button>
+                <div className="row center botonesproducto mb-1">
+                    <button type="button" className= "botonopciones" onClick={() => (navigate(`/Productos/${id}`))}>Detalles</button>
+                    <button type="button" className= "botonopciones" >Comprar</button>
                 </div>
             </div>
         </div>
     )
 }
 
-export default Producto;
+export default TarjetaProducto;
