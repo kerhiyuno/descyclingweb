@@ -13,12 +13,12 @@ import maceteros from '../img/Maceteros/6.jpeg';
 import portada from '../img/carrusel/portada.png';
 import hacemos from '../img/carrusel/hacemos.png';
 import prueba from '../img/carrusel/prueba.png';
+import ElementoMenuGrande from './inicio/ElementoMenuGrande';
 
 
 const Inicio = () => {
     const navigate = useNavigate();
     const [ratio, guardarRatio] = useState(window.screen.width/window.screen.height);
-    const {cambioCategoria} = useContext(ProductosContext)
 
     window.addEventListener("resize", function(event) {
         guardarRatio(window.screen.width/window.screen.height);
@@ -89,53 +89,15 @@ const Inicio = () => {
                 </Carousel.Item>
                 </Carousel>
             <div className="bloqueproductos mt-5 mb-5">
-                <h3>INNOVACIÓN CIRCULAR </h3>
+                <h2>INNOVACIÓN CIRCULAR </h2>
                 <p>¿Quieres aportar con un granito de arena a reducir la contaminación? Conoce nuestros productos sustentables</p>
                 <div className="container-fluid">
                         <div className="row botones">
-                            <div className="col bloqueimagenboton">
-                                <div className='col'>
-                                    <div className='row'>
-                                        <img src={baldosas} className="imagenSecciones" alt="" onClick={() =>{cambioCategoria("baldosa");navigate('/Productos')}}/>
-                                        <div className='d-flex justify-content-center mt-1'>
-                                            <button type="button" className= "botonSecciones"  onClick={() =>{cambioCategoria("baldosa");navigate('/Productos')}}>Baldosas</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col bloqueimagenboton">
-                                <div className='col-'>
-                                        <div className='row'>
-                                            <img src={maceteros} className="imagenSecciones" alt="" onClick={() =>{cambioCategoria("baldosa");navigate('/Productos')}}/>
-                                            <div className='d-flex justify-content-center mt-1'>
-                                                <button type="button" className= "botonSecciones"  onClick={() =>{cambioCategoria("macetero");navigate('/Productos')}}>Maceteros</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            <div className="col bloqueimagenboton">
-                                <div className='col'>
-                                        <div className='row'>
-                                            <img src={otros} className="imagenSecciones" alt="" onClick={() =>{cambioCategoria("baldosa");navigate('/Productos')}}/>
-                                            <div className='d-flex justify-content-center mt-1'>
-                                                <button type="button" className= "botonSecciones"  onClick={() =>{cambioCategoria("otro");navigate('/Productos')}}>Otros</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                            <ElementoMenuGrande imagen={baldosas} categoria='piedra' esProductos={true} ruta={'/Productos'}></ElementoMenuGrande>
+                            <ElementoMenuGrande imagen={maceteros} categoria='planeta' esProductos={true} ruta={'/Productos'} ></ElementoMenuGrande>
+                            <ElementoMenuGrande imagen={otros} categoria='maceta' esProductos={true} ruta={'/Productos'}></ElementoMenuGrande>
                         </div>
                 </div>
-            </div>
-            <div className="reproductor mb-5 mt-5">
-            {ratio > 1 ? 
-                <ReactPlayer url='https://youtu.be/MvNby-4ByXw' width="1280px" height="616px" playing={true} loop={true} />
-            :    <ReactPlayer url='https://youtu.be/MvNby-4ByXw' width="400px" height="180px" playing={true} loop={true} />
-            }
-            </div>
-            <div className="bloquetotal mb-5 mt-5">
-                <h1 className="font-playlist-script">¿Te has preguntado cuanta riqueza desechas a diario?</h1>
-                <p>~ 60% de tus residuos terminan en vertederos</p>
-                <p>Transformamos residuos de vidrio, plásticos y caucho en diseño</p>
             </div>
             <div  className="bloquedescripcion mb-5 mt-5">
                 <div className="container-fluid">
@@ -158,6 +120,53 @@ const Inicio = () => {
                     </div>
                 </div>
             </div>
+            <div className="bloquetotal mb-5 mt-5">
+                <h1 className="font-playlist-script">¿Te has preguntado cuanta riqueza desechas a diario?</h1>
+                <p>~ 60% de tus residuos terminan en vertederos</p>
+                <p>Transformamos residuos de vidrio, plásticos y caucho en diseño</p>
+            </div>
+            <div className="bloqueproductos mt-5 mb-5">
+                <div className="mb-5 mt-5">
+                    <h2 className='mb-3'>Clientes felices, corazones felices</h2>
+                    <p className='m-3'>Descycling es un proyecto que busca vincular a la comunidad con la valoración de los residuos y sensibilizar sobre la importancia de su gestión. Por eso, tu opinión es fundamental.</p>
+                    <p>Te invitamos a ser parte del cambio, sensibilízate</p>
+                    <h4>Únete a Descycling</h4>
+                    <div className="container-fluid">
+                        <div className="row botones mt-4">
+                            <div className="col bloqueimagenEncuesta">
+                                    <div className='row'>
+                                        <img src={baldosas} className="imagenEncuesta" alt=""/>
+                                        <div className='d-flex justify-content-center mt-1'>
+                                            <div className='col'>
+                                                <p className='tituloEncuesta'>Casa matriz o de construcción</p>
+                                                <p>10/05/2023</p>
+                                                <p>"Me parece una estupenda idea, que si perfeccionan su formula para crear y diseñar distintos productos y formas se debería vender 
+                                                    como pan caliente."Me parece una estupenda idea, que si perfeccionan su formula para crear y diseñar distintos productos y formas se
+                                                    debería vender como pan caliente."</p>
+                                             </div>
+                                        </div>
+                                </div>
+                            </div>
+                            <div className="col bloqueimagenEncuesta">
+                                    <div className='row'>
+                                        <img src={baldosas} className="imagenEncuesta" alt="" />
+                                        <div className='d-flex justify-content-center mt-1'>
+                                            <div className='col'>
+                                                <p className='tituloEncuesta'>Encuestados</p>
+                                                <p>10/05/2023</p>
+                                                <p>"Me parece una estupenda idea, que si perfeccionan su formula para crear y diseñar distintos productos y formas se debería vender 
+                                                    como pan caliente."Me parece una estupenda idea, que si perfeccionan su formula para crear y diseñar distintos productos y formas se
+                                                    debería vender como pan caliente."</p>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h3>¿Tienes una empresa/startup que crea eco-cemento?</h3>
+                <h4 className="link" onClick={() => navigate('/Contacto')}>Contáctanos</h4>
+            </div>
             <div className="bloqueestadisticas">
                 <div className="row w-100">
                     <div className="col text-center">
@@ -179,42 +188,12 @@ const Inicio = () => {
                 </div>
             </div>
             <div className="bloqueproductos mb-5 mt-5">
-                <h1 className="font-playlist-script">Gestiona tus residuos con nosotros</h1>
-                <p>Sé parte de la comunidad "Descycling" y obtén una gestión a domicilio de tus residuos de vidrio,
-                    plástico y caucho, teniendo descuentos en los productos y una atención personalizada de ellos. </p>
-
+                <h3>Nuestros Servicios</h3>
                     <div className="container-fluid">
                         <div className="row botones">
-                            <div className="col bloqueimagenboton">
-                                <div className='col'>
-                                    <div className='row'>
-                                        <img src={baldosas} className="imagenSecciones" alt=""/>
-                                        <div className='d-flex justify-content-center  mt-1'>
-                                            <button type="button" className= "botonSecciones"  onClick={() =>{cambioCategoria("baldosa");navigate('/Productos')}}>Planes</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col bloqueimagenboton">
-                                <div className='col'>
-                                        <div className='row'>
-                                            <img src={maceteros} className="imagenSecciones" alt=""/>
-                                            <div className='d-flex justify-content-center mt-1'>
-                                                <button type="button" className= "botonSecciones"  onClick={() =>{cambioCategoria("macetero");navigate('/Productos')}}>Recolección única</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            <div className="col bloqueimagenboton">
-                                <div className='col'>
-                                        <div className='row'>
-                                            <img src={otros} className="imagenSecciones" alt=""/>
-                                            <div className='d-flex justify-content-center mt-1'>
-                                                <button type="button" className= "botonSecciones"  onClick={() =>{cambioCategoria("otro");navigate('/Productos')}}>Contacto</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                            <ElementoMenuGrande imagen={baldosas} categoria='piedra' esProductos={false} ruta={'/Productos'}></ElementoMenuGrande>
+                            <ElementoMenuGrande imagen={maceteros} categoria='planeta' esProductos={false} ruta={'/Productos'} ></ElementoMenuGrande>
+                            <ElementoMenuGrande imagen={otros} categoria='maceta' esProductos={false} ruta={'/Productos'}></ElementoMenuGrande>
                         </div>
                     </div>
             </div>

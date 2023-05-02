@@ -7,13 +7,13 @@
   background-color: white;
   color: black;
   margin: 10px auto;
-  padding: 10px;
+  padding: 30px;
   min-width: 300px;
   max-width: 1400px;
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
   position: relative;
-  box-shadow: 0 6px 6px rgba(0,0,0,0.15);
+  box-shadow: 0 10px 10px rgba(0,0,0,0.15);
 }
 
 .bloqueestadisticas{
@@ -59,10 +59,11 @@
   background-color: green;
 }
 
-h3{
+h2,h3,h4{
   text-align: center;
   font-family: 'Poppins', sans-serif;
 }
+
 
 p{
   text-align: center;
@@ -132,4 +133,32 @@ h5{
   font-family: 'Josefin Sans', sans-serif;
   font-size: 16px;
   position: relative;
+}
+
+.imagenEncuesta{
+  border-radius: 50%;
+  width: auto !important;
+  max-height: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.bloqueimagenEncuesta {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  justify-self: center;
+  background-color: #F0F0F1;
+  margin: 10px;
+}
+
+.link{
+  color: #22AAA6;
+  cursor: pointer;
+}
+
+.tituloEncuesta{
+  font-weight: bold;
+  font-size: 18px;
 }
