@@ -28,5 +28,8 @@ code {
   src: local("Playlist"),
     url("./fonts/Playlist/Playlist-Script.otf") format("opentype");
 }
-      
+
+html,body{
+  overflow-x: hidden;
+}
   

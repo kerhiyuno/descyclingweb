@@ -10,11 +10,11 @@ const TarjetaProducto = ({producto}) => {
             <div className="card shadow border-0">
                 <h3>{nombre}</h3>
                 <img src={imagen} className="card-img-top imagen" alt=""/>
-                <p>{descripcion}</p>
-                <div className="row center botonesproducto mb-1">
+                <p className='parrafodescriptivo p-2'>{descripcion}</p>
+             {/*   <div className="row center botonesproducto mb-1 mt-1">
                     <button type="button" className= "botonopciones" onClick={() => (navigate(`/Productos/${id}`))}>Detalles</button>
                     <button type="button" className= "botonopciones" >Comprar</button>
-                </div>
+    </div> */}
             </div>
         </div>
     )

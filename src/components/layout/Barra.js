@@ -47,12 +47,14 @@ const Barra = (props) => {
                 <NavItem>
                     <NavLink className="NavLink-empaty" href="/Contacto">Contacto</NavLink>
                 </NavItem>
-                <NavItem>
+                {
+              /*<NavItem>
                     <NavLink className="NavLink-empaty" href="/MiCuenta">{ autenticado ? ('Mi cuenta') : ('Iniciar Sesión')}</NavLink>
                 </NavItem>
                 <NavItem>
                     <NavLink className="NavLink-empaty" href="/Carrito">Carrito</NavLink>
-                </NavItem>
+                </NavItem> */
+                }
             </Nav>
         {isOpen ? (
             <div className="barraverdecollapse">

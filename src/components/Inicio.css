@@ -17,18 +17,29 @@
 }
 
 .bloqueestadisticas{
-  background-color: #e6e6e6;
   color: black;
   margin: 10px auto;
   margin-top: 5vh;
   padding: 20px;
   min-width: 300px;
-  max-width: auto;
+  max-width: 100%;
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
   position: relative;
-  box-shadow: 0 6px 6px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-left: 10vw;
+  padding-right: 10vw;
 }
+
+@media (max-width:768px){
+  .bloqueestadisticas{
+      justify-content: center;
+  }
+}
+
 
 .bloquetotal{
   display: flex;
@@ -39,11 +50,14 @@
   min-height: 20vh;
   height: auto;
   color: white;
-  width: auto;
+  width: auto; 
   font-family: 'Poppins', sans-serif;
-  font-size: 16px;
+  font-size: 15px;
   position: relative;
   box-shadow: 0 6px 6px rgba(0,0,0,0.15);
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2vw;
 }
 
 .botonSecciones{
@@ -53,6 +67,8 @@
   border: 0px;
   border-radius: 30px;
   width: 100%;
+  padding: 6px;
+  font-size: 14px;
 }
 
 .botonSecciones:hover {
@@ -120,7 +136,13 @@ h5{
 }
 
 .numeros{
-  font-size: 30px;
+  font-size: 27px;
+  color: white;
+}
+
+.letraEstadistica{
+  color: white;
+  font-size: 15px;
 }
 
 
@@ -162,3 +184,20 @@ h5{
   font-weight: bold;
   font-size: 18px;
 }
+
+.textoEncuesta{
+  font-size: 14px;
+}
+.circulo{
+  border-radius: 50%;
+  background-color: #105157;
+  height: 160px;
+  width: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  flex-direction: column;
+  box-shadow: 0 6px 6px rgba(0,0,0,0.15);
+}
+

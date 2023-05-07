@@ -94,7 +94,7 @@ const DetalleProducto = () => {
                     </div>
                     <div >
                         <form className="formulario-item" onSubmit={handleSubmit}>
-                            <label htmlFor='cantidad'>Cantidad</label>
+                            <label htmlFor='cantidad' className='d-flex justify-content-center mt-2'>Cantidad</label>
                             <select id="cantidad" value={cantidad} onChange={e => guardarCantidad(parseInt(e.target.value))}>
                                 <option className='formulario-item-option'>--Seleccione--</option>
                                 {[...Array(stock + 1)].map((e, i) => {

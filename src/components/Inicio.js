@@ -1,9 +1,7 @@
-import {Fragment, useState, useContext} from 'react';
+import {Fragment, useState} from 'react';
 import './Inicio.css';
 import { useNavigate } from 'react-router-dom';
 import { Carousel } from 'react-bootstrap';
-import ProductosContext from '../context/productos/productosContext';
-import ReactPlayer from 'react-player';
 import DescripcionDescycling from './inicio/DescripcionDescycling';
 
 import baldosas from '../img/baldosas.jpg';
@@ -120,8 +118,8 @@ const Inicio = () => {
                     </div>
                 </div>
             </div>
-            <div className="bloquetotal mb-5 mt-5">
-                <h1 className="font-playlist-script">¿Te has preguntado cuanta riqueza desechas a diario?</h1>
+            <div className="bloquetotal mb-5 mt-5 p-4">
+                <h3 className='mb-4'>¿Te has preguntado cuanta riqueza desechas a diario?</h3>
                 <p>~ 60% de tus residuos terminan en vertederos</p>
                 <p>Transformamos residuos de vidrio, plásticos y caucho en diseño</p>
             </div>
@@ -140,7 +138,7 @@ const Inicio = () => {
                                             <div className='col'>
                                                 <p className='tituloEncuesta'>Casa matriz o de construcción</p>
                                                 <p>10/05/2023</p>
-                                                <p>"Me parece una estupenda idea, que si perfeccionan su formula para crear y diseñar distintos productos y formas se debería vender 
+                                                <p className='textoEncuesta'>"Me parece una estupenda idea, que si perfeccionan su formula para crear y diseñar distintos productos y formas se debería vender 
                                                     como pan caliente."Me parece una estupenda idea, que si perfeccionan su formula para crear y diseñar distintos productos y formas se
                                                     debería vender como pan caliente."</p>
                                              </div>
@@ -154,7 +152,7 @@ const Inicio = () => {
                                             <div className='col'>
                                                 <p className='tituloEncuesta'>Encuestados</p>
                                                 <p>10/05/2023</p>
-                                                <p>"Me parece una estupenda idea, que si perfeccionan su formula para crear y diseñar distintos productos y formas se debería vender 
+                                                <p className='textoEncuesta'>"Me parece una estupenda idea, que si perfeccionan su formula para crear y diseñar distintos productos y formas se debería vender 
                                                     como pan caliente."Me parece una estupenda idea, que si perfeccionan su formula para crear y diseñar distintos productos y formas se
                                                     debería vender como pan caliente."</p>
                                             </div>
@@ -168,32 +166,30 @@ const Inicio = () => {
                 <h4 className="link" onClick={() => navigate('/Contacto')}>Contáctanos</h4>
             </div>
             <div className="bloqueestadisticas">
-                <div className="row w-100">
-                    <div className="col text-center">
-                    <p className="numeros mb-0">1550</p>
-                    <p>botellas</p>
+                    <div className="circulo">
+                        <p className="numeros mb-0">1550</p>
+                        <p className='letraEstadistica'>botellas</p>
                     </div>
-                    <div className="col text-center">
-                    <p className="numeros mb-0">125</p>
-                    <p>maceteros</p>
+                    <div className="circulo">
+                        <p className="numeros mb-0">125</p>
+                        <p className='letraEstadistica'>maceteros</p>
                     </div>
-                    <div className="col text-center">
-                    <p className="numeros mb-0">35</p>
-                    <p>toneladas de vidrio</p>
+                    <div className="circulo">
+                        <p className="numeros mb-0">35</p>
+                        <p className='letraEstadistica'>toneladas de vidrio</p>
                     </div>
-                    <div className="col text-center">
-                    <p className="numeros mb-0">18</p>
-                    <p>de septiembre</p>
+                        <div className="circulo">
+                        <p className="numeros mb-0">18</p>
+                        <p className='letraEstadistica'>de septiembre</p>
                     </div>
-                </div>
             </div>
             <div className="bloqueproductos mb-5 mt-5">
                 <h3>Nuestros Servicios</h3>
                     <div className="container-fluid">
                         <div className="row botones">
-                            <ElementoMenuGrande imagen={baldosas} categoria='piedra' esProductos={false} ruta={'/Productos'}></ElementoMenuGrande>
-                            <ElementoMenuGrande imagen={maceteros} categoria='planeta' esProductos={false} ruta={'/Productos'} ></ElementoMenuGrande>
-                            <ElementoMenuGrande imagen={otros} categoria='maceta' esProductos={false} ruta={'/Productos'}></ElementoMenuGrande>
+                            <ElementoMenuGrande imagen={baldosas} categoria='Packs y productos individuales' esProductos={false} ruta={'/Productos'}></ElementoMenuGrande>
+                            <ElementoMenuGrande imagen={maceteros} categoria='Planes Empresas REP' esProductos={false} ruta={'/Productos'} ></ElementoMenuGrande>
+                            <ElementoMenuGrande imagen={otros} categoria='Planes de recolección mensual o única' esProductos={false} ruta={'/Productos'}></ElementoMenuGrande>
                         </div>
                     </div>
             </div>
