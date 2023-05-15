@@ -8,20 +8,28 @@ import {
   Nav,
   NavItem,
   NavLink,
+  Dropdown,
+  DropdownItem,
+  DropdownToggle,
+  DropdownMenu
 } from 'reactstrap';
 
 import logo from '../../img/logo.png';
 import AuthContext from '../../context/auth/authContext';
+import { useNavigate } from 'react-router-dom';
 
 const Barra = (props) => {
 
     const [isOpen, setIsOpen] = useState(false);
+    const navigate = useNavigate();
 
     const toggle = () => setIsOpen(!isOpen);
     const onExited = () => setIsOpen(false);
     const { autenticado } = useContext(AuthContext);
 
-    
+    const [dropdownOpen, setDropdownOpen] = useState(false);
+
+    const toggleDropdown = () => setDropdownOpen(!dropdownOpen);
 
   return (
     <div>
@@ -35,9 +43,16 @@ const Barra = (props) => {
                 <NavItem>
                     <NavLink className="NavLink-empaty" href="/">Inicio</NavLink>
                 </NavItem>
-                <NavItem>
-                    <NavLink className="NavLink-empaty" href="/QuienesSomos">Quienes somos</NavLink>
-                </NavItem>
+                <Dropdown nav isOpen={dropdownOpen} toggle={toggleDropdown}>
+                    <DropdownToggle nav caret  className="NavLink-empaty">
+                    Quienes somos
+                    </DropdownToggle>
+                    <DropdownMenu >
+                        <div onClick={() => {setDropdownOpen(false);navigate('/QuienesSomos')}} className='DropdownMenu'>Nosotros</div>
+                        <DropdownItem divider />
+                        <div onClick={() => {setDropdownOpen(false);navigate('/Prensa')}} className='DropdownMenu'>Prensa y videos</div>
+                    </DropdownMenu>
+                </Dropdown>
                 <NavItem>
                     <NavLink className="NavLink-empaty" href="/Productos">Productos y gestión</NavLink>
                 </NavItem>
@@ -47,6 +62,7 @@ const Barra = (props) => {
                 <NavItem>
                     <NavLink className="NavLink-empaty" href="/Contacto">Contacto</NavLink>
                 </NavItem>
+
                 {
               /*<NavItem>
                     <NavLink className="NavLink-empaty" href="/MiCuenta">{ autenticado ? ('Mi cuenta') : ('Iniciar Sesión')}</NavLink>

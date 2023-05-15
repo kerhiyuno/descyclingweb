@@ -55,8 +55,8 @@ const Footer = (props) => {
             <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mt-2">
                 <h6 className="text-uppercase mb-4 font-weight-bold">Contacto</h6>
                 <p><i className="fa fa-home mr-3"></i> Maipú, Calle falsa 123, Chile</p>
-                <p><i className="fa fa-envelope mr-3"></i> info@gmail.com</p>
-                <p><i className="fa fa-phone mr-3"></i> + 56 9 234 567 88</p>
+                <p><i className="fa fa-envelope mr-3"></i> descycling@gmail.com</p>
+                <p><i className="fa fa-phone mr-3"></i> +56 9 90869462</p>
             </div>
             </div>
         </section>

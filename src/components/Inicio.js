@@ -86,17 +86,6 @@ const Inicio = () => {
                     </Carousel.Caption>
                 </Carousel.Item>
                 </Carousel>
-            <div className="bloqueproductos mt-5 mb-5">
-                <h2>INNOVACIÓN CIRCULAR </h2>
-                <p>¿Quieres aportar con un granito de arena a reducir la contaminación? Conoce nuestros productos sustentables</p>
-                <div className="container-fluid">
-                        <div className="row botones">
-                            <ElementoMenuGrande imagen={baldosas} categoria='piedra' esProductos={true} ruta={'/Productos'}></ElementoMenuGrande>
-                            <ElementoMenuGrande imagen={maceteros} categoria='planeta' esProductos={true} ruta={'/Productos'} ></ElementoMenuGrande>
-                            <ElementoMenuGrande imagen={otros} categoria='maceta' esProductos={true} ruta={'/Productos'}></ElementoMenuGrande>
-                        </div>
-                </div>
-            </div>
             <div  className="bloquedescripcion mb-5 mt-5">
                 <div className="container-fluid">
                     <div className="row justify-content-center">
@@ -118,10 +107,31 @@ const Inicio = () => {
                     </div>
                 </div>
             </div>
+            <div className="bloqueproductos mt-5 mb-5">
+                <h2>INNOVACIÓN CIRCULAR </h2>
+                <p>¿Quieres aportar con un granito de arena a reducir la contaminación? Conoce nuestros productos sustentables</p>
+                <div className="container-fluid">
+                        <div className="row botones">
+                            <ElementoMenuGrande imagen={baldosas} categoria='piedra' esProductos={true} ruta={'/Productos'}></ElementoMenuGrande>
+                            <ElementoMenuGrande imagen={maceteros} categoria='planeta' esProductos={true} ruta={'/Productos'} ></ElementoMenuGrande>
+                            <ElementoMenuGrande imagen={otros} categoria='maceta' esProductos={true} ruta={'/Productos'}></ElementoMenuGrande>
+                        </div>
+                </div>
+            </div>
             <div className="bloquetotal mb-5 mt-5 p-4">
                 <h3 className='mb-4'>¿Te has preguntado cuanta riqueza desechas a diario?</h3>
                 <p>~ 60% de tus residuos terminan en vertederos</p>
                 <p>Transformamos residuos de vidrio, plásticos y caucho en diseño</p>
+            </div>
+            <div className="bloqueproductos mb-5 mt-5">
+                <h3>Nuestros Servicios</h3>
+                    <div className="container-fluid">
+                        <div className="row botones">
+                            <ElementoMenuGrande imagen={baldosas} categoria='Packs y productos individuales' esProductos={false} ruta={'/Productos'}></ElementoMenuGrande>
+                            <ElementoMenuGrande imagen={maceteros} categoria='Planes Empresas REP' esProductos={false} ruta={'/Productos'} ></ElementoMenuGrande>
+                            <ElementoMenuGrande imagen={otros} categoria='Planes de recolección mensual o única' esProductos={false} ruta={'/Productos'}></ElementoMenuGrande>
+                        </div>
+                    </div>
             </div>
             <div className="bloqueproductos mt-5 mb-5">
                 <div className="mb-5 mt-5">
@@ -181,16 +191,6 @@ const Inicio = () => {
                         <div className="circulo">
                         <p className="numeros mb-0">18</p>
                         <p className='letraEstadistica'>de septiembre</p>
-                    </div>
-            </div>
-            <div className="bloqueproductos mb-5 mt-5">
-                <h3>Nuestros Servicios</h3>
-                    <div className="container-fluid">
-                        <div className="row botones">
-                            <ElementoMenuGrande imagen={baldosas} categoria='Packs y productos individuales' esProductos={false} ruta={'/Productos'}></ElementoMenuGrande>
-                            <ElementoMenuGrande imagen={maceteros} categoria='Planes Empresas REP' esProductos={false} ruta={'/Productos'} ></ElementoMenuGrande>
-                            <ElementoMenuGrande imagen={otros} categoria='Planes de recolección mensual o única' esProductos={false} ruta={'/Productos'}></ElementoMenuGrande>
-                        </div>
                     </div>
             </div>
         </Fragment>
