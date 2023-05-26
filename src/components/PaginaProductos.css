@@ -12,9 +12,9 @@
     border: 0px;
     margin: 2px;
     border-radius: 16px;
-    font-size: 20px; /* Ajusta el tamaño del texto */
-    padding: 6px 15px; /* Ajusta el relleno (padding) del botón */
-    height: 40px; /* Ajusta la altura del botón */
+    font-size: 18px;
+    padding: 6px 15px;
+    height: 35px;
     min-width: 120px;
     text-align: center;
     line-height: 20px;

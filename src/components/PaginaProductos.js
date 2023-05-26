@@ -76,7 +76,7 @@ const PaginaProductos = (props) => {
     return(
       <div className="col-12 p-5 mt-5">
         <h1>Nuestros productos</h1>
-            <div className="d-flex flex-wrap justify-content-center mb-5 mt-5">
+            <div className="d-flex flex-wrap justify-content-center mb-5 mt-4">
               <button className={`botoncategorias m-1 ${categorias.includes("todos") ? "pulsado" : "nopulsado"}`} onClick={()=>{cambioCategoria("todos")}}>Todos los productos</button>
               {listaBotones}
             </div>

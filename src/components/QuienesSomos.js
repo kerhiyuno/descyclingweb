@@ -9,7 +9,7 @@ import logo from '../img/logo_2.png';
 
 const QuienesSomos = () => {
     return(
-        <div className="container-fluid">
+        <div className="container-fluid contenedor-qs">
             <img className = 'mt-5 p-5 imgLogoTitulo' src={logo} alt="" width="500"/>
             <div className='bloqueNosotros'>
                 <h1>Un impacto real</h1>
@@ -17,7 +17,7 @@ const QuienesSomos = () => {
                     junto a la creación de productos a partir de residuos, buscamos ofrecer un servicio integral, reemplazar la construcción tradicional
                     y abordar la sensibilización de un consumo y vida sostentible en pro del cuidado del medioambiente y, por consiguiente,
                     a la calidad de vida de las personas.</h5>
-                <h5>Debemos hacer un cambio ya, te invitamos a ser parte. Sensibilizate.</h5>
+                <h5>Debemos hacer un cambio ya, te invitamos a ser parte. Sensibilízate.</h5>
                 <h5 className="link mt-4">Únete a Descycling</h5>
                 <h5 className="link">#descycling</h5>
                 <h5 className="link">#diseñayrecicla</h5>

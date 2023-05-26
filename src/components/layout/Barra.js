@@ -48,9 +48,9 @@ const Barra = (props) => {
                     Quienes somos
                     </DropdownToggle>
                     <DropdownMenu >
-                        <div onClick={() => {setDropdownOpen(false);navigate('/QuienesSomos')}} className='DropdownMenu'>Nosotros</div>
+                        <div onClick={() => {setDropdownOpen(false);onExited();navigate('/QuienesSomos')}} className='DropdownMenu text-center'>Nosotros</div>
                         <DropdownItem divider />
-                        <div onClick={() => {setDropdownOpen(false);navigate('/Prensa')}} className='DropdownMenu'>Prensa y videos</div>
+                        <div onClick={() => {setDropdownOpen(false);onExited();navigate('/Prensa')}} className='DropdownMenu text-center'>Prensa y videos</div>
                     </DropdownMenu>
                 </Dropdown>
                 <NavItem>
