@@ -1,5 +1,7 @@
 import Formulario from './Elementos/Formulario';
 import './Contacto.css';
+import portada from '../img/contacto/Contacto_portada.jpg';
+
 
 const Contacto = () => {
     return(
@@ -7,8 +9,16 @@ const Contacto = () => {
             <h1>¿Quieres contactarnos?</h1>
             <div className="container mb-5">
                 <div className="row" align="center">
+                    <div className='col'>
+                        <img 
+                        className="col w-100 mt-4 p-0"
+                        src={portada}
+                        alt="Contacto"
+                        />
+                    </div>
                     <Formulario />
                 </div>
+                
             </div>
         </div>
       )

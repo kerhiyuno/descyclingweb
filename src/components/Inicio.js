@@ -14,6 +14,14 @@ import prueba from '../img/carrusel/prueba.png';
 import ElementoMenuGrande from './inicio/ElementoMenuGrande';
 
 
+import icono1 from '../img/inicio/Inicio_icono1.png';
+import icono2 from '../img/inicio/Inicio_icono2.png';
+import icono3 from '../img/inicio/Inicio_icono3.png';
+import icono4 from '../img/inicio/Inicio_icono4.png';
+import icono5 from '../img/inicio/Inicio_icono5.png';
+
+
+
 const Inicio = () => {
     const navigate = useNavigate();
     const [ratio, guardarRatio] = useState(window.screen.width/window.screen.height);
@@ -91,19 +99,19 @@ const Inicio = () => {
                     <div className="row justify-content-center">
                         <DescripcionDescycling titulo = "Vidrio 100% reciclable" 
                                         descripcion = "Nueva forma de gestionar y revalorizar tus residuos de vidrio de forma fácil, personalizada y transparente"
-                                        imagen={maceteros}/>
+                                        imagen={icono1}/>
                         <DescripcionDescycling titulo = "Economía circular" 
                                         descripcion = "Buscamos incorporarnos como revalorizadores dentro de la cadena productiva que establece la nueva Ley REP"
-                                        imagen={maceteros}/>
+                                        imagen={icono2}/>
                         <DescripcionDescycling titulo = "Composición versátil" 
                                         descripcion = "A partir de la combinación de residuos de vidrio, plástico y caucho Descycling es capaz de crear nuevos ciclos de vida"
-                                        imagen={maceteros}/>
+                                        imagen={icono3}/>
                         <DescripcionDescycling titulo = "Romper lo tradicional" 
                                         descripcion = "La incorporación de residuos permite eliminar el uso de arenas y piedras, además de reducir cemento en un 50%"
-                                        imagen={maceteros}/>
+                                        imagen={icono4}/>
                         <DescripcionDescycling titulo = "Únicos en Chile" 
                                         descripcion = "Creamos productos únicos con resistencia y personalidad para toda persona que desee dar sentido a sus espacios"
-                                        imagen={maceteros}/>
+                                        imagen={icono5}/>
                     </div>
                 </div>
             </div>

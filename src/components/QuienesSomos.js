@@ -5,11 +5,12 @@ import coni from '../img/coni.jpeg';
 import seba from '../img/seba.jpeg';
 import maceteros from '../img/Maceteros/6.jpeg';
 import logo from '../img/logo_2.png';
-
+import historia1 from '../img/historia/Historia_origen_1.jpg';
+import historia2 from '../img/historia/Historia_origen_2.jpg';
 
 const QuienesSomos = () => {
     return(
-        <div className="container-fluid contenedor-qs">
+        <div className="container-fluid contenedor-q">
             <img className = 'mt-5 p-5 imgLogoTitulo' src={logo} alt="" width="500"/>
             <div className='bloqueNosotros'>
                 <h1>Un impacto real</h1>
@@ -98,9 +99,7 @@ const QuienesSomos = () => {
                         caucho y plástico), levantando el primer feedback del usuario y las consideraciones técnicas a seguir en la instalación, todo a partir de una 
                         composición única e ideada en Chile..</p>
                 </div>
-                <div className="item-3">
-                    <p></p>
-                </div>
+                <img src={historia1} alt="" className="img-1"/>
                 <div className="item-2">
                     <p>Es a partir de esta idea que se dio inicio al gran proyecto Descycling en mayo de 2021, donde Catherine, Constanza y Sebastián quisieron continuar 
                         con la idea, llevándola a las nuevas tendencias, dandose cuenta del gran problema que existía respecto a la contaminación por residuos dada la 
@@ -112,6 +111,7 @@ const QuienesSomos = () => {
                         cliente seleccionar distintos diseños (marmoleado, terrazo, color sólido, etc.) y con la gran ventaja de ser accesibles al usuario en la región 
                         Metropolitana de Santiago, Chile. Otorgando una solución a la contaminación y creación de espacios con sentido.</p>
                 </div>
+                <img src={historia2} alt="" className="img-2"/>
         </section>
         </div>
       )
