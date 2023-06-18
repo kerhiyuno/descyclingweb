@@ -3,6 +3,7 @@ import './Inicio.css';
 import { useNavigate } from 'react-router-dom';
 import { Carousel } from 'react-bootstrap';
 import DescripcionDescycling from './inicio/DescripcionDescycling';
+import Partner from './inicio/Partner';
 
 import baldosas from '../img/baldosas.jpg';
 import otros from '../img/Maceteros/otros.jpeg';
@@ -13,12 +14,18 @@ import hacemos from '../img/carrusel/hacemos.png';
 import prueba from '../img/carrusel/prueba.png';
 import ElementoMenuGrande from './inicio/ElementoMenuGrande';
 
-
 import icono1 from '../img/inicio/Inicio_icono1.png';
 import icono2 from '../img/inicio/Inicio_icono2.png';
 import icono3 from '../img/inicio/Inicio_icono3.png';
 import icono4 from '../img/inicio/Inicio_icono4.png';
 import icono5 from '../img/inicio/Inicio_icono5.png';
+
+import logo1 from '../img/inicio/Logo_1.png';
+import logo2 from '../img/inicio/Logo_2.png';
+import logo3 from '../img/inicio/Logo_3.png';
+import logo4 from '../img/inicio/Logo_4.png';
+import logo5 from '../img/inicio/Logo_5.png';
+
 
 
 
@@ -200,6 +207,13 @@ const Inicio = () => {
                         <p className="numeros mb-0">18</p>
                         <p className='letraEstadistica'>de septiembre</p>
                     </div>
+            </div>
+            <div className="bloquepartner row">
+                <Partner imagen={logo1}></Partner>
+                <Partner imagen={logo2}></Partner>
+                <Partner imagen={logo3}></Partner>
+                <Partner imagen={logo4}></Partner>
+                <Partner imagen={logo5}></Partner>
             </div>
         </Fragment>
     )
