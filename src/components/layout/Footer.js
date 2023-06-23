@@ -19,7 +19,7 @@ const Footer = (props) => {
                 Descycling
                 </h6>
                 <p className="text-right">
-                Salvando al mundo
+                Diseñando con residuos
                 </p>
             </div>
             <hr className="w-100 d-md-none" />
@@ -27,13 +27,13 @@ const Footer = (props) => {
             <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mt-2">
                 <h6 className="text-uppercase mb-4 font-weight-bold">Productos</h6>
                 <p>
-                <button className="text-white links" onClick={() => {cambioCategoria("1"); navigate('/Productos')}} >Baldosas</button>
+                <button className="text-white links" onClick={() => {cambioCategoria("1"); navigate('/Productos')}} >Placas de fachada</button>
                 </p>
                 <p>
-                <button className="text-white links" onClick={() => {cambioCategoria("2"); navigate('/Productos')}}>Maceteros</button>
+                <button className="text-white links" onClick={() => {cambioCategoria("2"); navigate('/Productos')}}>Macetas</button>
                 </p>
                 <p>
-                <button className="text-white links"  onClick={() => {cambioCategoria("3"); navigate('/Productos')}}>Otros</button>
+                <button className="text-white links"  onClick={() => {cambioCategoria("3"); navigate('/Productos')}}>Decoración</button>
                 </p>
             </div>
             <hr className="w-100 d-md-none" />
@@ -48,13 +48,13 @@ const Footer = (props) => {
                 <a className="text-white links" href="/QuienesSomos">Quienes Somos</a>
                 </p>
                 <p>
-                <a className="text-white links" href="/Historia">Historia</a>
+                <a className="text-white links" href="/QuienesSomos">Historia</a>
                 </p>
             </div>
             <hr className="w-100  d-md-none" />
             <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mt-2">
                 <h6 className="text-uppercase mb-4 font-weight-bold">Contacto</h6>
-                <p><i className="fa fa-home mr-3"></i> Maipú, Calle falsa 123, Chile</p>
+                <p><i className="fa fa-home mr-3"></i> Providencia, Huelen 10, Chile</p>
                 <p><i className="fa fa-envelope mr-3"></i> descycling@gmail.com</p>
                 <p><i className="fa fa-phone mr-3"></i> +56 9 90869462</p>
             </div>

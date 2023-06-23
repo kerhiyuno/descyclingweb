@@ -68,7 +68,7 @@
   border-radius: 30px;
   width: 100%;
   padding: 7px;
-  font-size: 13px;
+  font-size: 12px;
 }
 
 .botonSecciones:hover {
@@ -119,6 +119,11 @@ h5{
 .imagenvertical{
   height: 300px;
   width: 100%;
+}
+
+.carrusel{
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
 .imagenSecciones {
@@ -210,4 +215,22 @@ h5{
   margin: 10px;
   flex-direction: column;
   box-shadow: 0 6px 6px rgba(0,0,0,0.15);
+}
+
+@media (max-width:768px){
+  .problema{
+    width: 90%;
+    max-width: fit-content;
+  }
+}
+
+.problema2{
+  width: 57%;
+}
+
+@media (max-width:768px){
+  .problema2{
+    width: 90%;
+    max-width: fit-content;
+  }
 }
