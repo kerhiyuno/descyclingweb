@@ -31,7 +31,6 @@ function App() {
         <Container fluid className="p-0">
             <Barra/>
             <Routes>
-              <Route exact path="/" element={<Inicio />}/>
               <Route exact path="/Productos" element={<PaginaProductos />}/>
               <Route exact path="/Productos/:id" element={<DetalleProducto />}/>
               <Route exact path="/QuienesSomos" element={<QuienesSomos />}/>
@@ -45,6 +44,7 @@ function App() {
               <Route exact path="/confirmar/:token" element={<ConfirmarCuenta />}/>
               <Route exact path="/IniciarSesion" element={<InicioSesion />}/>
               <Route exact path="/Carrito" element={<Carrito />}/>
+              <Route exact path="/" element={<Inicio />}/>
             </Routes>
             <Footer/>
         </Container>
