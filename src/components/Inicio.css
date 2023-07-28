@@ -4,64 +4,102 @@
 }
 
 .bloqueproductos{
-    background-color: white;
-    color: black;
-    margin: 10px auto;
-    padding: 10px;
-    min-width: 300px;
-    max-width: 1500px;
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 16px;
-    position: relative;
-    box-shadow: 0 6px 6px rgba(0,0,0,0.15);
-  }
+  background-color: white;
+  color: black;
+  margin: 10px auto;
+  padding: 30px;
+  min-width: 300px;
+  max-width: 1400px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  position: relative;
+  box-shadow: 0 10px 10px rgba(0,0,0,0.15);
+}
+
 .bloqueestadisticas{
-    background-color: #e6e6e6;
-    color: black;
-    margin: 10px auto;
-    margin-top: 5vh;
-    padding: 20px;
-    min-width: 300px;
-    max-width: auto;
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 16px;
-    position: relative;
-    box-shadow: 0 6px 6px rgba(0,0,0,0.15);
-  }
+  color: black;
+  margin: 10px auto;
+  margin-top: 5vh;
+  padding: 20px;
+  min-width: 300px;
+  max-width: 100%;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
+
 .bloquetotal{
-    background-color: #167067;
-    min-height: 20vh;
-    height: auto;
-    color: white;
-    width:auto;
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 16px;
-    position: relative;
-    box-shadow: 0 6px 6px rgba(0,0,0,0.15);
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #105157;
+  min-height: 20vh;
+  height: auto;
+  color: white;
+  width: auto; 
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  position: relative;
+  box-shadow: 0 6px 6px rgba(0,0,0,0.15);
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2vw;
+}
+
 
 .botonSecciones{
-    background-color: #167067;
-    color: white;
-    text-decoration: none;
-    border: 0px;
-    border-radius: 30px;
-}
-.botonSecciones:hover {
-  background-color: green;
+  background-color: #105157;
+  color: white;
+  text-decoration: none;
+  border: 0px;
+  border-radius: 30px;
+  width: 100%;
+  padding: 7px;
+  font-size: 13px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 
-h3{
-  text-align: center;
-  font-family: 'Josefin Sans', sans-serif;
+.botonSecciones:hover {
+  background-color: green;
+  color: white;
 }
+
+h2,h3,h4,h5{
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+h5{
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem !important;
+}
+
 
 p{
   text-align: center;
+  font-size: 0.9rem;
 }
 
 h1{
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
+}
+
+h2{
+  font-family: 'Poppins', sans-serif;
+}
+
+h5{
+  font-family: 'Poppins', sans-serif;
 }
 
 .botones{
@@ -70,30 +108,42 @@ h1{
 }
 
 .imagenhorizontal{
-  max-height: 700px;
+  max-height: 650px;
 }
 .imagenvertical{
   height: 300px;
   width: 100%;
 }
 
+.carrusel{
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
 .imagenSecciones {
-  border-radius: 8%;
-  width: auto;
+  border-radius: 10%;
+  max-width: 250px;
+  width: 80%;
   margin-left: auto;
   margin-right: auto;
   display: block;
+  -webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .2s ease-in-out;
+	transition: .2s ease-in-out;
 }
 
 .imagenSecciones:hover {
-  cursor: pointer
+  cursor: pointer;
+  -webkit-transform: scale(1.01);
+	transform: scale(1.01);
+
 }
 
 .bloqueimagenboton {
   display: flex;
   justify-content: center;
   padding: 20px;
-  margin: 20px;
   justify-self: center;
 }
 
@@ -103,40 +153,102 @@ h1{
 }
 
 .numeros{
-  font-size: 30px;
+  font-size: 27px;
+  color: white;
 }
 
-.parrafodescriptivo{
-  min-width: 280px;
-  max-width: 350px;
-  text-align: justify;
-  margin: 0 auto;
-  font-size: 17px;
+.letraEstadistica{
+  color: white;
+  font-size: 15px;
 }
 
-.imagenparrafo{
-  border-radius: 10%;
-  min-width: 280px;
-  max-width: 350px;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-}
-
-.bloquedescripcion{
+.bloquedescripcion {
   background-color: white;
   color: black;
   margin: 10px auto;
-  min-width: 300px;
-  max-width: 1800px;
+  min-width: 250px;
+  max-width: 1600px;
   font-family: 'Josefin Sans', sans-serif;
   font-size: 16px;
   position: relative;
 }
 
+.imagenEncuesta{
+  border-radius: 50%;
+  width: auto !important;
+  max-height: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
 
-.bloqueimagendescripcion {
+.bloqueimagenEncuesta {
+  display: flex;
+  justify-content: center;
   padding: 20px;
-  margin: 20px;
+  justify-self: center;
+  background-color: #F0F0F1;
+  margin: 10px;
+}
+
+.link{
+  color: #22AAA6;
+  cursor: pointer;
+}
+
+.tituloEncuesta{
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.textoEncuesta{
+  font-size: 14px;
+}
+.circulo{
+  border-radius: 50%;
+  background-color: #105157;
+  height: 160px;
+  width: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  flex-direction: column;
   box-shadow: 0 6px 6px rgba(0,0,0,0.15);
+}
+
+.problema2{
+  width: 57%;
+}
+
+@media (max-width:768px){
+  h5{
+    font-size: 1rem !important;
+  }
+  .bloqueestadisticas{
+    justify-content: center;
+  }
+  .bloqueestadisticas{
+    justify-content: center;
+  }
+  .problema{
+    width: 90%;
+    max-width: fit-content;
+  }
+  .problema2{
+    width: 90%;
+    max-width: fit-content;
+  }
+}
+
+@media screen and (min-width:1921px){
+  p{
+    font-size: 1.5rem !important;
+  }
+  .bloquedescripcion {
+    max-width: 1900px;
+  }
+  .botonSecciones{
+    font-size: 17px;
+  }
 }

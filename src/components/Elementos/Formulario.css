@@ -2,9 +2,11 @@ body {
     text-align: center;
 }
 .formulario {
-    padding: 50px;
-    font-family: 'Josefin Sans', sans-serif;
+    margin-top: 5vh;
+    font-family: 'Poppins', sans-serif;
     width: auto;
+    display: flex;
+    justify-content: center;
 }
 
 .resultadocontacto{

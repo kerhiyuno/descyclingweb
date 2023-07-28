@@ -3,7 +3,7 @@
     padding-top: 15px !important;
     height: auto !important;
     width: auto !important;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
   }
 
 .imagen{
@@ -21,7 +21,7 @@
 .botonopciones{
     margin-bottom: 6px;
     border-radius: 15px;
-    background-color: #167067 ;
+    background-color: #105157 ;
     border: none;
     color: white;
 }

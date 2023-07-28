@@ -1,10 +1,24 @@
 .footerestilos{
-    background-color: #167067;
-    font-family: 'Josefin Sans', sans-serif;
+    background-color: #105157;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 50px;
 }
 
 .links{
-    background-color: #167067;
+    background-color: #105157;
     border: none;
     text-decoration: none;
+}
+
+.footer{
+    background-color: #105157;
+    border: none;
+    text-decoration: none;
+}
+
+
+@media screen and (min-width: 1921px) {
+    .container{
+        max-width: 1500px !important;
+    }
 }

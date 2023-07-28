@@ -8,17 +8,15 @@ import clienteAxios from '../../config/axios';
 const FormularioInicioSesion = () => {
 
     const { guardarDatosLogin } = useContext(AuthContext);
-
-
     const [formulario, guardarFormulario] = useState({
         correo:'',
         password:'',
     })
 
-
     const [exito, guardarExito] = useState(false);
     const [error, guardarError] = useState(false);
     const [cargando, guardarCargando] = useState(false);
+    const [mensajeError, guardarMensajeError] = useState('');
 
     useEffect(() => {
         const script = document.createElement("script");
@@ -52,6 +50,11 @@ const FormularioInicioSesion = () => {
         guardarError(false);
         guardarCargando(true);
         e.preventDefault();
+        if([formulario.correo, formulario.password].includes('')){
+            guardarError(true);
+            guardarMensajeError('Todos los campos son obligarorios');
+            return;
+        }
         try {
             const respuesta = await clienteAxios.post('/api/auth/login',{
                 correo: formulario.correo,
@@ -66,11 +69,13 @@ const FormularioInicioSesion = () => {
                 password:'',
                 confirmar:''
             });
-            let token = respuesta.data.token;
+            let accessToken = respuesta.data.accessToken;
+            let refreshToken = respuesta.data.refreshToken;
             let correo = respuesta.data.usuario.correo;
             let nombre = respuesta.data.usuario.nombre;
             let google = respuesta.data.usuario.google;
-            localStorage.setItem('token', token);
+            localStorage.setItem('accessToken', accessToken);
+            localStorage.setItem('refreshToken', refreshToken);
             localStorage.setItem('correo', correo);
             localStorage.setItem('nombre', nombre);
             localStorage.setItem('google', google);
@@ -78,6 +83,7 @@ const FormularioInicioSesion = () => {
         } catch (error) {
             console.log(error);
             console.log(error.response);
+            guardarMensajeError(error.response.data.msg);
             guardarError(true);
         }
         guardarCargando(false);
@@ -132,8 +138,8 @@ const FormularioInicioSesion = () => {
                 </form>
             </div>
             <div className="resultadocontacto">
-                {error ? <p className="alert alert-danger" role="alert"> Ha ocurrido un error</p> : null}
-                {exito ? <p className="alert alert-success" role="alert">El usuario ha sido registrado correctamente</p> : null}
+                {error ? <p className="alert alert-danger" role="alert">{mensajeError}</p> : null}
+                {exito ? <p className="alert alert-success" role="alert">El usuario ha iniciado sesión correctamente</p> : null}
                 <SpinnerCircular enabled={cargando} />
             </div>
             <div className='col-md-2'>

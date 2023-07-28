@@ -12,7 +12,7 @@ import './fonts/Playlist/Playlist-Script.otf';
 const divRoot = document.getElementById('root');
 const root = createRoot(divRoot);
 root.render(
-  <React.StrictMode>
+  <>
     <App />
     <link
       rel="stylesheet"
@@ -26,7 +26,7 @@ root.render(
     <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet"></link>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"></link>
 
-  </React.StrictMode>);
+  </>);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

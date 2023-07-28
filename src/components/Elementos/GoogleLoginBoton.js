@@ -9,19 +9,24 @@ const GoogleLoginBoton = () => {
         window.customCallback = handleCredentialResponse;
     }, [])
 
-    const { guardarDatosLogin, autenticado } = useContext(AuthContext);
-    
+    const { guardarDatosLogin, autenticado, google} = useContext(AuthContext);
+
+    console.log(google);
+    console.log("hola");
+
     async function  handleCredentialResponse(response) {
         console.log('id token', response);
         try {
             const respuesta = await clienteAxios.post('/api/auth/google',{id_token:response.credential});
             console.log(respuesta);
             console.log(respuesta.data.usuario.correo);
-            let token = respuesta.data.token;
+            let accessToken = respuesta.data.accessToken;
+            let refreshToken = respuesta.data.refreshToken;
             let correo = respuesta.data.usuario.correo;
             let nombre = respuesta.data.usuario.nombre;
             let google = true;
-            localStorage.setItem('token', token);
+            localStorage.setItem('accessToken', accessToken);
+            localStorage.setItem('refreshToken', refreshToken);
             localStorage.setItem('correo', correo);
             localStorage.setItem('nombre', nombre);
             localStorage.setItem('google', google);
@@ -57,7 +62,7 @@ const GoogleLoginBoton = () => {
                 data-logo_alignment="left">
             </div>
             <script ></script>
-            { autenticado ? <button className="logoutGoogle mt-2" id="google_signout" onClick={() => {logoutGoogle(window.google)} }>
+            { autenticado && google ? <button className="logoutGoogle mt-2" id="google_signout" onClick={() => {logoutGoogle(window.google)} }>
                 Cerrar Sesión google
             </button> : null}
         </div>
