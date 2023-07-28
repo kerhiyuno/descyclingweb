@@ -2,9 +2,15 @@
     padding: 10px;
     margin: 10px;
     box-shadow: 0 6px 6px rgba(0,0,0,0.15);
-    max-width: 240px !important;
+    max-width: 250px !important;
 }
-  
+
+@media screen and (min-width: 1921px) {
+    .bloqueimagendescripcion {
+        max-width: 300px !important;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .bloqueimagendescripcion {
         margin: 20px 0; /* Reducir el margen lateral */

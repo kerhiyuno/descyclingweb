@@ -6,7 +6,8 @@ import DescripcionDescycling from './inicio/DescripcionDescycling';
 import Partner from './inicio/Partner';
 
 import baldosas from '../img/baldosas.jpg';
-import decoracion from '../img/decoracion.jpeg';
+import decoracion from '../img/decoracion.jpg';
+import decoracion_p from '../img/decoracion_p.jpeg';
 import maceteros from '../img/Maceteros/6.jpeg';
 
 import portada from '../img/carrusel/Carrusel_1.jpg';
@@ -28,10 +29,12 @@ import logo5 from '../img/inicio/Logo_5.png';
 
 import problema1 from '../img/inicio/problema1.png';
 import problema_m from '../img/inicio/problema_m.png';
-import problema2 from '../img/inicio/problema2.jpg';
+import problema2 from '../img/inicio/problema_2.jpg';
+import problema2_m from '../img/inicio/problema_2_m.jpg';
 
 import recoleccion from '../img/servicios/recoleccion.jpg';
 import persona from '../img/inicio/persona.jpg';
+import asesoria from '../img/inicio/Asesoria.jpg';
 
 
 const Inicio = () => {
@@ -47,17 +50,17 @@ const Inicio = () => {
         <Fragment>
             <div className='carrusel'>
             <Carousel>
-                <Carousel.Item interval={2000}>
+                <Carousel.Item interval={5000}>
                     {ratio > 1 ? 
                     <img 
                     className="d-block w-100 mt-4 p-0 imagenhorizontal"
-                    src={portada}
+                    src={prueba}
                     alt="Second slide"
                     />
                     :
                     <img 
                     className="d-block w-100 mt-4 imagenvertical"
-                    src={portada}
+                    src={prueba}
                     alt="Second slide"
                     />
                     }
@@ -67,7 +70,7 @@ const Inicio = () => {
                     <p className='m-0'>reciclando solo el 1%</p>
                     </Carousel.Caption>
                 </Carousel.Item>
-                <Carousel.Item interval={2000}>
+                <Carousel.Item interval={5000}>
                     {ratio > 1 ? 
                     <img 
                     className="d-block w-100 mt-4 imagenhorizontal"
@@ -88,17 +91,17 @@ const Inicio = () => {
                     <p className='m-0'>para crear espacios con sentido</p>
                     </Carousel.Caption>
                 </Carousel.Item>
-                <Carousel.Item interval={2000}>
+                <Carousel.Item interval={5000}>
                     {ratio > 1 ? 
                     <img 
                     className="d-block w-100 mt-4 imagenhorizontal"
-                    src={prueba}
+                    src={portada}
                     alt="Second slide"
                     />
                     :
                     <img 
                     className="d-block w-100 mt-4 imagenvertical"
-                    src={prueba}
+                    src={portada}
                     alt="Second slide"
                     />
                     
@@ -143,7 +146,7 @@ const Inicio = () => {
                 {ratio > 1 ? 
                         <img className='problema2' src={problema2}/>
                         :
-                        <img className='problema2' src={problema2}/>
+                        <img className='problema2' src={problema2_m}/>
                         }
             </div>
             <div className="bloqueproductos mt-5 mb-5">
@@ -151,9 +154,9 @@ const Inicio = () => {
                 <p>¿Quieres disfrutar de tus espacios con productos resistentes, hechos a partir de vidrio recuperado, con diseños versátiles y un mensaje a favor del reciclaje?</p>
                 <div className="container-fluid">
                         <div className="row botones">
-                            <ElementoMenuGrande imagen={baldosas} categoria='Placas de fachada' esProductos={true} ruta={'/Productos'}></ElementoMenuGrande>
-                            <ElementoMenuGrande imagen={maceteros} categoria='Macetas' esProductos={true} ruta={'/Productos'} ></ElementoMenuGrande>
-                            <ElementoMenuGrande imagen={decoracion} categoria='Decoración' esProductos={true} ruta={'/Productos'}></ElementoMenuGrande>
+                            <ElementoMenuGrande imagen={baldosas} categoria='Placas de fachada' esProductos={true} ruta={'/Productos'} rutaExterna={false}></ElementoMenuGrande>
+                            <ElementoMenuGrande imagen={maceteros} categoria='Macetas' esProductos={true} ruta={'/Productos'} rutaExterna={false}></ElementoMenuGrande>
+                            <ElementoMenuGrande imagen={decoracion} categoria='Decoración' esProductos={true} ruta={'/Productos'} rutaExterna={false}></ElementoMenuGrande>
                         </div>
                 </div>
             </div>
@@ -166,9 +169,9 @@ const Inicio = () => {
                 <h3>Nuestros Servicios</h3>
                     <div className="container-fluid">
                         <div className="row botones">
-                            <ElementoMenuGrande imagen={baldosas} categoria='Asesorias' esProductos={false} ruta={'/Contacto'}></ElementoMenuGrande>
-                            <ElementoMenuGrande imagen={recoleccion} categoria='Planes de recolección' esProductos={false} ruta={'/Contacto'} ></ElementoMenuGrande>
-                            <ElementoMenuGrande imagen={decoracion} categoria='Proyectos' esProductos={false} ruta={'/Contacto'}></ElementoMenuGrande>
+                            <ElementoMenuGrande imagen={asesoria} categoria='Asesorias' esProductos={false} ruta={'/Contacto'}></ElementoMenuGrande>
+                            <ElementoMenuGrande imagen={recoleccion} categoria='Planes de recolección' esProductos={false} ruta={'https://docs.google.com/forms/d/e/1FAIpQLSc9RpDZbRv4ME9hXrpekIspYBUkvZjwaOCLOG2_gFlKiRN86Q/viewform?usp=sf_link'} rutaExterna={true} ></ElementoMenuGrande>
+                            <ElementoMenuGrande imagen={decoracion_p} categoria='Proyectos' esProductos={false} ruta={'/Contacto'}></ElementoMenuGrande>
                         </div>
                     </div>
             </div>

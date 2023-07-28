@@ -19,7 +19,7 @@ const Prensa = () => {
                     alt="prensa1"
                 /> 
             </div>
-            <h3 className="p-5 mt-5">Imágenes</h3>
+            <h3 className="p-5 mt-5">Hitos</h3>
             <div className='row justify-content-center'>
                 <img 
                     className="col-lg-3 colprensa"

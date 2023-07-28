@@ -16,8 +16,6 @@
   }
 
 .bloqueFotos{
-  max-width: 1920px;
-
 }
 
 .imagenesbloque{
@@ -109,11 +107,11 @@ h1 {
 }
 
 .img-1 {
-  width: 100%;
+  width: 90%;
   margin-top: 2vh;
 }
 .img-2 {
-   width: 100%;
+   width: 9%;
    margin-top: 2vh;
 }
 

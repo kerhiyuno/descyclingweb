@@ -27,13 +27,13 @@ const Footer = (props) => {
             <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mt-2">
                 <h6 className="text-uppercase mb-4 font-weight-bold">Productos</h6>
                 <p>
-                <button className="text-white links" onClick={() => {cambioCategoria("1"); navigate('/Productos')}} >Placas de fachada</button>
+                <button className="text-white links" onClick={() => {cambioCategoria("Placas"); navigate('/Productos')}} >Placas de fachada</button>
                 </p>
                 <p>
-                <button className="text-white links" onClick={() => {cambioCategoria("2"); navigate('/Productos')}}>Macetas</button>
+                <button className="text-white links" onClick={() => {cambioCategoria("Macetas"); navigate('/Productos')}}>Macetas</button>
                 </p>
                 <p>
-                <button className="text-white links"  onClick={() => {cambioCategoria("3"); navigate('/Productos')}}>Decoración</button>
+                <button className="text-white links"  onClick={() => {cambioCategoria("Decoración"); navigate('/Productos')}}>Decoración</button>
                 </p>
             </div>
             <hr className="w-100 d-md-none" />
@@ -41,9 +41,6 @@ const Footer = (props) => {
                 <h6 className="text-uppercase mb-4 font-weight-bold">
                 Información
                 </h6>
-                <p>
-                <a className="text-white links" href="/">Preguntas frecuentes</a>
-                </p>
                 <p>
                 <a className="text-white links" href="/QuienesSomos">Quienes Somos</a>
                 </p>

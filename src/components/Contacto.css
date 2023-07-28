@@ -1,0 +1,9 @@
+@media screen and (min-width: 1921px) {
+    .imagenContacto{
+        height: 1000px;
+    }
+}
+
+.botonFormulario{
+    width: 80% !important;
+}

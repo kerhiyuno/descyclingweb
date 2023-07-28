@@ -37,14 +37,14 @@ const Barra = (props) => {
         <NavbarBrand href="/" style={{marginLeft: "4%", paddingRight: "0px"}}>
                   <img src={logo} alt="" width="200"/>
               </NavbarBrand>
-        <NavbarToggler className="NavToogler-empaty" onClick={toggle} />
+        <NavbarToggler className="NavToogler-descycling" onClick={toggle} />
         <Collapse className="logCollapse mr-auto" isOpen={isOpen} onExited={onExited} navbar>
             <Nav navbar  className="justify-content-center" style={{ marginLeft: "0%" }}>
                 <NavItem>
-                    <NavLink className="NavLink-empaty" href="/">Inicio</NavLink>
+                    <NavLink className="NavLink-descycling" href="/">Inicio</NavLink>
                 </NavItem>
                 <Dropdown nav isOpen={dropdownOpen} toggle={toggleDropdown}>
-                    <DropdownToggle nav caret  className="NavLink-empaty">
+                    <DropdownToggle nav caret  className="NavLink-descycling">
                     Quienes somos
                     </DropdownToggle>
                     <DropdownMenu >
@@ -54,21 +54,21 @@ const Barra = (props) => {
                     </DropdownMenu>
                 </Dropdown>
                 <NavItem>
-                    <NavLink className="NavLink-empaty" href="/Productos">Productos y gestión</NavLink>
+                    <NavLink className="NavLink-descycling" href="/Productos">Productos y gestión</NavLink>
                 </NavItem>
                 <NavItem>
-                    <NavLink className="NavLink-empaty" href="/Blog">Blog</NavLink>
+                    <NavLink className="NavLink-descycling" href="/Blog">Blog</NavLink>
                 </NavItem>
                 <NavItem>
-                    <NavLink className="NavLink-empaty" href="/Contacto">Contacto</NavLink>
+                    <NavLink className="NavLink-descycling" href="/Contacto">Contacto</NavLink>
                 </NavItem>
 
                 {
               /*<NavItem>
-                    <NavLink className="NavLink-empaty" href="/MiCuenta">{ autenticado ? ('Mi cuenta') : ('Iniciar Sesión')}</NavLink>
+                    <NavLink className="NavLink-descycling" href="/MiCuenta">{ autenticado ? ('Mi cuenta') : ('Iniciar Sesión')}</NavLink>
                 </NavItem>
                 <NavItem>
-                    <NavLink className="NavLink-empaty" href="/Carrito">Carrito</NavLink>
+                    <NavLink className="NavLink-descycling" href="/Carrito">Carrito</NavLink>
                 </NavItem> */
                 }
             </Nav>

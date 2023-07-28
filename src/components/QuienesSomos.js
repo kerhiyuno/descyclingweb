@@ -7,6 +7,10 @@ import maceteros from '../img/Maceteros/6.jpeg';
 import logo from '../img/logo_2.png';
 import historia1 from '../img/historia/Historia_origen_1.jpg';
 import historia2 from '../img/historia/Historia_origen_2.jpg';
+import mision from '../img/nosotros/mision.jpg';
+import meta from '../img/nosotros/meta.jpg';
+import vision from '../img/nosotros/vision.jpg';
+
 
 const QuienesSomos = () => {
     return(
@@ -24,41 +28,26 @@ const QuienesSomos = () => {
                 <h5 className="link">#diseñayrecicla</h5>
             </div>
             <div className="container-fluid mt-5">
-                <div className="row justify-content-center mt-5">
+¡                <div className="row justify-content-center mt-5">
                     <h2 className='col-md-2 col-sm-12 my-auto'>Misión</h2>
-                    <DescripcionDescycling titulo = "Vidrio 100% reciclable" 
-                        descripcion = "Nueva forma de gestionar y revalorizar tus residuos de vidrio de forma fácil, personalizada y transparente"
-                        imagen={maceteros}/>
-                    <DescripcionDescycling titulo = "Economía circular" 
-                        descripcion = "Buscamos incorporarnos como revalorizadores dentro de la cadena productiva que establece la nueva Ley REP"
-                        imagen={maceteros}/>
-                    <DescripcionDescycling titulo = "Composición versátil" 
-                        descripcion = "A partir de la combinación de residuos de vidrio, plástico y caucho Descycling es capaz de crear nuevos ciclos de vida"
-                        imagen={maceteros}/>
+                    <DescripcionDescycling titulo = "Servicios" 
+                        descripcion = "Otorgar a las comunidades servicios de asesoría ambiental y creación de proyectos con productos hechos 
+                        con residuos para crear espacios con sentido, reduciendo el CO2 y el uso de materiales de construcción tradicionales"
+                        imagen={mision}/>
                 </div>
                 <div className="row justify-content-center mt-5">
                     <h2 className='col-md-2 col-sm-12 my-auto'>Visión</h2>
-                    <DescripcionDescycling titulo = "Vidrio 100% reciclable" 
-                        descripcion = "Nueva forma de gestionar y revalorizar tus residuos de vidrio de forma fácil, personalizada y transparente"
-                        imagen={maceteros}/>
-                    <DescripcionDescycling titulo = "Economía circular" 
-                        descripcion = "Buscamos incorporarnos como revalorizadores dentro de la cadena productiva que establece la nueva Ley REP"
-                        imagen={maceteros}/>
-                    <DescripcionDescycling titulo = "Composición versátil" 
-                        descripcion = "A partir de la combinación de residuos de vidrio, plástico y caucho Descycling es capaz de crear nuevos ciclos de vida"
-                        imagen={maceteros}/>
+                    <DescripcionDescycling titulo = "Triple impacto" 
+                        descripcion = "Queremos ser pioneros en entregar servicios de triple impacto involucrando a las comunidades y entregando soluciones 
+                        para la gestión de residuos mediante la innovación"
+                        imagen={vision}/>
                 </div>
                 <div className="row justify-content-center mt-5 mb-5">
                     <h2 className='col-md-2 col-sm-12 my-auto'>Metas</h2>
-                    <DescripcionDescycling titulo = "Vidrio 100% reciclable" 
-                        descripcion = "Nueva forma de gestionar y revalorizar tus residuos de vidrio de forma fácil, personalizada y transparente"
-                        imagen={maceteros}/>
-                    <DescripcionDescycling titulo = "Economía circular" 
-                        descripcion = "Buscamos incorporarnos como revalorizadores dentro de la cadena productiva que establece la nueva Ley REP"
-                        imagen={maceteros}/>
-                    <DescripcionDescycling titulo = "Composición versátil" 
-                        descripcion = "A partir de la combinación de residuos de vidrio, plástico y caucho Descycling es capaz de crear nuevos ciclos de vida"
-                        imagen={maceteros}/>
+                    <DescripcionDescycling titulo = "Innovación sustentable" 
+                        descripcion = "Lograr ser una empresa líder y cooperativa con el ecosistema de innovación sustentable, 
+                        para reducir las cifras de contaminación a nivel nacional"
+                        imagen={meta}/>
                 </div>
             </div>
             <h1 className="mt-5 p-5">El equipo</h1>

@@ -34,13 +34,6 @@
   padding-right: 10vw;
 }
 
-@media (max-width:768px){
-  .bloqueestadisticas{
-      justify-content: center;
-  }
-}
-
-
 .bloquetotal{
   display: flex;
   justify-content: center;
@@ -60,6 +53,7 @@
   padding: 2vw;
 }
 
+
 .botonSecciones{
   background-color: #105157;
   color: white;
@@ -68,11 +62,15 @@
   border-radius: 30px;
   width: 100%;
   padding: 7px;
-  font-size: 12px;
+  font-size: 13px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 
 .botonSecciones:hover {
   background-color: green;
+  color: white;
 }
 
 h2,h3,h4,h5{
@@ -86,14 +84,10 @@ h5{
   font-size: 1.2rem !important;
 }
 
-@media (max-width:768px){
-  h5{
-    font-size: 1rem !important;
-  }
-}
 
 p{
   text-align: center;
+  font-size: 0.9rem;
 }
 
 h1{
@@ -133,10 +127,17 @@ h5{
   margin-left: auto;
   margin-right: auto;
   display: block;
+  -webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .2s ease-in-out;
+	transition: .2s ease-in-out;
 }
 
 .imagenSecciones:hover {
-  cursor: pointer
+  cursor: pointer;
+  -webkit-transform: scale(1.01);
+	transform: scale(1.01);
+
 }
 
 .bloqueimagenboton {
@@ -160,7 +161,6 @@ h5{
   color: white;
   font-size: 15px;
 }
-
 
 .bloquedescripcion {
   background-color: white;
@@ -217,20 +217,38 @@ h5{
   box-shadow: 0 6px 6px rgba(0,0,0,0.15);
 }
 
-@media (max-width:768px){
-  .problema{
-    width: 90%;
-    max-width: fit-content;
-  }
-}
-
 .problema2{
   width: 57%;
 }
 
 @media (max-width:768px){
+  h5{
+    font-size: 1rem !important;
+  }
+  .bloqueestadisticas{
+    justify-content: center;
+  }
+  .bloqueestadisticas{
+    justify-content: center;
+  }
+  .problema{
+    width: 90%;
+    max-width: fit-content;
+  }
   .problema2{
     width: 90%;
     max-width: fit-content;
+  }
+}
+
+@media screen and (min-width:1921px){
+  p{
+    font-size: 1.5rem !important;
+  }
+  .bloquedescripcion {
+    max-width: 1900px;
+  }
+  .botonSecciones{
+    font-size: 17px;
   }
 }

@@ -4,6 +4,12 @@ import ProductosContext from '../context/productos/productosContext';
 import './PaginaProductos.css';
 import clienteAxios from '../config/axios';
 
+import producto1 from '../img/productos/placa_cuadrada.jpg';
+import producto2 from '../img/productos/placa_hexagonal.jpg';
+import producto3 from '../img/productos/placas_listeles.jpg';
+import producto4 from '../img/productos/maceta_cuadrada.jpg';
+import producto5 from '../img/productos/maceta_octagonal.jpg';
+import producto6 from '../img/productos/porta_velas.jpg';
 
 const PaginaProductos = (props) => {
     console.log(process.env.REACT_APP_BACKEND_URL);
@@ -12,16 +18,16 @@ const PaginaProductos = (props) => {
     const [ListaProductos, guardarListaProductos] = useState([])
     const [listaCategorias, guardarListaCategorias] = useState([]);
     const [listaBotones, guardarListaBotones] = useState([])
-
     const [listaMostrar, guardarListaMostrar] = useState([])
 
 
     const obtenerCategorias= async () => {
         try {
-        	const respuesta = await clienteAxios.get('/api/categorias/');
-        	let listadecategorias = []
-            respuesta.data.map(categoria => (listadecategorias.push(categoria.nombre)));
-            console.log(listadecategorias);
+        	//const respuesta = await clienteAxios.get('/api/categorias/');
+        	//let listadecategorias = []
+            //respuesta.data.map(categoria => (listadecategorias.push(categoria.nombre)));
+            //console.log(listadecategorias);
+            let listadecategorias = ['Placas','Macetas','Decoración'];
             guardarListaCategorias(listadecategorias);
         } catch (error) {
             console.log(error);
@@ -29,9 +35,90 @@ const PaginaProductos = (props) => {
     }
     const obtenerProductos= async () => {
         try {
-            const respuesta = await clienteAxios.get('/api/productos/');
-            console.log(respuesta.data);
-            guardarListaProductos(respuesta.data);
+            //const respuesta = await clienteAxios.get('/api/productos/');
+            //console.log(respuesta.data);
+            //let listaProductos = respuesta.data;
+            let listaProductos = [
+                {
+                    "id": 1,
+                    "nombre": "Placa cuadrada",
+                    "descripcion": "Placas de cemento para usos en piso o fachadas, útil para decorar espacios vacíos y otorgar una pizca de color, amor y sentido.",
+                    "stock": 1,
+                    "precio": 100,
+                    "imagen": producto1,
+                    "categoriaId": 1,
+                    "estado": false,
+                    "categoria": {
+                        "nombre": "Placas"
+                    }
+                },
+                {
+                    "id": 2,
+                    "nombre": "Placa hexagonal",
+                    "descripcion": "Placas de cemento para usos en piso o fachadas, útil para decorar espacios vacíos y otorgar una pizca de color, amor y sentido.",
+                    "stock": 1,
+                    "precio": 1000,
+                    "imagen": producto2,
+                    "categoriaId": 4,
+                    "estado": true,
+                    "categoria": {
+                        "nombre": "Placas"
+                    }
+                },
+                {
+                    "id": 3,
+                    "nombre": "Placa estilo listeles",
+                    "descripcion": "Placas de cemento para usos en piso o fachadas, útil para decorar espacios vacíos y otorgar una pizca de color, amor y sentido.",
+                    "stock": 1,
+                    "precio": 1000,
+                    "imagen": producto3,
+                    "categoriaId": 6,
+                    "estado": true,
+                    "categoria": {
+                        "nombre": "Placas"
+                    }
+                },
+                {
+                    "id": 4,
+                    "nombre": "Maceta cuadrada",
+                    "descripcion": "Macetas perfectas para suculentas y plantas con bajo crecimiento de raíces. Impermeabilizada y con salida para evacuación de exceso de agua.",
+                    "stock": 1,
+                    "precio": 1000,
+                    "imagen": producto4,
+                    "categoriaId": 2,
+                    "estado": true,
+                    "categoria": {
+                        "nombre": "Macetas"
+                    }
+                },
+                {
+                    "id": 5,
+                    "nombre": "Maceta octagonal",
+                    "descripcion": "Macetas perfectas para suculentas y plantas con bajo crecimiento de raíces. Impermeabilizada y con salida para evacuación de exceso de agua.",
+                    "stock": 1,
+                    "precio": 1000,
+                    "imagen": producto5,
+                    "categoriaId": 2,
+                    "estado": true,
+                    "categoria": {
+                        "nombre": "Macetas"
+                    }
+                },
+                {
+                    "id": 6,
+                    "nombre": "Portavelas",
+                    "descripcion": "Decoración para crear espacios únicos y novedosos.",
+                    "stock": 1,
+                    "precio": 1000,
+                    "imagen": producto6,
+                    "categoriaId": 2,
+                    "estado": true,
+                    "categoria": {
+                        "nombre": "Decoración"
+                    }
+                }
+            ];
+            guardarListaProductos(listaProductos);
         } catch (error) {
             console.log(error);
         }

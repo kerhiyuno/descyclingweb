@@ -2,14 +2,14 @@
     color: #105157;
     background: black;
 }
-.NavToogler-empaty{
+.NavToogler-descycling{
     color: white !important;
     border-color: white !important;
     background-color: #105157 !important;
     margin-right: 30px;
 }
 
-.NavLink-empaty{
+.NavLink-descycling{
     color: white !important;
     max-width: auto;
     text-align: center;
@@ -17,7 +17,7 @@
     margin: 10px;
 }
 
-.NavLink-empaty:hover{
+.NavLink-descycling:hover{
     color: #105157 !important;
     cursor: pointer;
     background: white !important;
@@ -42,15 +42,15 @@
     cursor: pointer;
 }
 
-.NavLink-empaty.alerta{
+.NavLink-descycling.alerta{
     position: relative;
     margin-right: 7px;
 }
 
-.NavLink-empaty.alerta.sol{
+.NavLink-descycling.alerta.sol{
     max-width: 200px;
 }
-.NavLink-empaty.alerta.al{
+.NavLink-descycling.alerta.al{
     max-width: 200px;
 }
 
