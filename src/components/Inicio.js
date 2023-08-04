@@ -116,9 +116,9 @@ const Inicio = () => {
             </div>
             <div className='d-flex justify-content-center mt-5'>
                 {ratio > 1 ? 
-                        <img className='problema' src={problema1}/>
+                        <img className='problema' src={problema1} alt="Problema 1"/>
                         :
-                        <img className='problema' src={problema_m}/>
+                        <img className='problema' src={problema_m} alt="Problema 1 movil"/>
                         }
             </div>
             <div  className="bloquedescripcion mb-5 mt-5">
@@ -144,9 +144,9 @@ const Inicio = () => {
             </div>
             <div className='d-flex justify-content-center mt-5'>
                 {ratio > 1 ? 
-                        <img className='problema2' src={problema2}/>
+                        <img className='problema2' src={problema2} alt="Problema 2"/>
                         :
-                        <img className='problema2' src={problema2_m}/>
+                        <img className='problema2' src={problema2_m} alt="Problema 2 movil"/>
                         }
             </div>
             <div className="bloqueproductos mt-5 mb-5">

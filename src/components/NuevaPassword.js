@@ -22,7 +22,7 @@ const NuevaPassword = () => {
       }
       comprobarToken();
 
-    }, [])
+    }, [token])
     
 
     const [formulario, guardarFormulario] = useState({
@@ -57,7 +57,7 @@ const NuevaPassword = () => {
             guardarError(true);
             return;
         }
-        if(formulario.confirmar != formulario.password){
+        if(formulario.confirmar !== formulario.password){
             guardarMensajeError('Las contraseñas deben ser iguales');
             guardarError(true);
             return;

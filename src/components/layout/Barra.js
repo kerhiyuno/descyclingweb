@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react';
+import { /*useContext,*/ useState } from 'react';
 import './Barra.css';
 import {
   Collapse,
@@ -15,7 +15,7 @@ import {
 } from 'reactstrap';
 
 import logo from '../../img/logo.png';
-import AuthContext from '../../context/auth/authContext';
+//import AuthContext from '../../context/auth/authContext';
 import { useNavigate } from 'react-router-dom';
 
 const Barra = (props) => {
@@ -25,7 +25,7 @@ const Barra = (props) => {
 
     const toggle = () => setIsOpen(!isOpen);
     const onExited = () => setIsOpen(false);
-    const { autenticado } = useContext(AuthContext);
+   // const { autenticado } = useContext(AuthContext);
 
     const [dropdownOpen, setDropdownOpen] = useState(false);
 

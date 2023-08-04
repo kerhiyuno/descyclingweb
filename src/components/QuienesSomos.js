@@ -3,7 +3,6 @@ import DescripcionDescycling from './inicio/DescripcionDescycling';
 import cati from '../img/cati.jpeg';
 import coni from '../img/coni.jpeg';
 import seba from '../img/seba.jpeg';
-import maceteros from '../img/Maceteros/6.jpeg';
 import logo from '../img/logo_2.png';
 import historia1 from '../img/historia/Historia_origen_1.jpg';
 import historia2 from '../img/historia/Historia_origen_2.jpg';

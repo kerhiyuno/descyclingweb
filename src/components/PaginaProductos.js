@@ -2,7 +2,7 @@ import {useState,useEffect,useContext} from 'react';
 import ListadoProductos from './productos/ListadoProductos';
 import ProductosContext from '../context/productos/productosContext';
 import './PaginaProductos.css';
-import clienteAxios from '../config/axios';
+//import clienteAxios from '../config/axios';
 
 import producto1 from '../img/productos/placa_cuadrada.jpg';
 import producto2 from '../img/productos/placa_hexagonal.jpg';
