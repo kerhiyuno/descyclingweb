@@ -154,7 +154,7 @@ const Inicio = () => {
                 <p>¿Quieres disfrutar de tus espacios con productos resistentes, hechos a partir de vidrio recuperado, con diseños versátiles y un mensaje a favor del reciclaje?</p>
                 <div className="container-fluid">
                         <div className="row botones">
-                            <ElementoMenuGrande imagen={baldosas} categoria='Placas de fachada' esProductos={true} ruta={'/Productos'} rutaExterna={false}></ElementoMenuGrande>
+                            <ElementoMenuGrande imagen={baldosas} categoria='Placas' esProductos={true} ruta={'/Productos'} rutaExterna={false}></ElementoMenuGrande>
                             <ElementoMenuGrande imagen={maceteros} categoria='Macetas' esProductos={true} ruta={'/Productos'} rutaExterna={false}></ElementoMenuGrande>
                             <ElementoMenuGrande imagen={decoracion} categoria='Decoración' esProductos={true} ruta={'/Productos'} rutaExterna={false}></ElementoMenuGrande>
                         </div>

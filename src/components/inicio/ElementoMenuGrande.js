@@ -15,6 +15,7 @@ const ElementoMenuGrande = ({imagen, categoria, esProductos, ruta, rutaExterna})
             window.location.replace(ruta);
         } else {
             navigate(ruta);
+            window.scrollTo(0, 0);
         }
     }
 
