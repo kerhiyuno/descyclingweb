@@ -27,7 +27,7 @@ const QuienesSomos = () => {
                 <h5 className="link">#diseñayrecicla</h5>
             </div>
             <div className="container-fluid mt-5">
-¡                <div className="row justify-content-center mt-5">
+                <div className="row justify-content-center mt-5">
                     <h2 className='col-md-2 col-sm-12 my-auto'>Misión</h2>
                     <DescripcionDescycling titulo = "Servicios" 
                         descripcion = "Otorgar a las comunidades servicios de asesoría ambiental y creación de proyectos con productos hechos 
