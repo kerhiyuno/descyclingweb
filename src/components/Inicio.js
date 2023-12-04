@@ -109,7 +109,7 @@ const Inicio = () => {
                     <Carousel.Caption>
                     <h3>Únanse a nosotros</h3>
                     <p className='m-0'>Para crear un impacto positivo en las comunidades y medioambiente</p>
-                    <p className='m-0'>reciclando solo el 1%</p>
+                    <p className='m-0'>únete a Descycling</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 </Carousel>
