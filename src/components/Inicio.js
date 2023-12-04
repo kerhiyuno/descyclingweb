@@ -10,9 +10,9 @@ import decoracion from '../img/decoracion.jpg';
 import decoracion_p from '../img/decoracion_p.jpeg';
 import maceteros from '../img/Maceteros/6.jpeg';
 
-import portada from '../img/carrusel/Carrusel_1.jpg';
+import prueba from '../img/carrusel/Carrusel_1.jpg';
 import hacemos from '../img/carrusel/Carrusel_2.jpg';
-import prueba from '../img/carrusel/Carrusel_3.jpg';
+import portada from '../img/carrusel/Carrusel_3.jpg';
 import ElementoMenuGrande from './inicio/ElementoMenuGrande';
 
 import icono1 from '../img/inicio/Inicio_icono1.png';
